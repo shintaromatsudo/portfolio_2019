@@ -4,6 +4,8 @@ import Form from '../../components/Form'
 
 class Post extends React.Component {
   render() {
+    console.log(this.props)
+    console.log(this.state)
     return (
       <div>
         <Button href="admin" name="Admin" />
