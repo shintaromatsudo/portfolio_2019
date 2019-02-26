@@ -1,5 +1,3 @@
-### https://raw.github.com/github/gitignore/90f149de451a5433aebd94d02d11b0e28843a1af/node.gitignore
-
 # Logs
 logs
 *.log
@@ -22,7 +20,7 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -58,6 +56,10 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.test
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
 
 # next.js build output
 .next
@@ -68,12 +70,8 @@ typings/
 # Serverless directories
 .serverless
 
-# custom
+# Mac files
 .DS_Store
-bundles
-docker/data
-.vagrant
-.env.json
+
+# editer
 .vscode
-api-server/bin
-storybook-static

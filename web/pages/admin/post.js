@@ -8,7 +8,7 @@ class Post extends React.Component {
     console.log(this.state)
     return (
       <div>
-        <Button href="admin" name="Admin" />
+        <Button href="/admin" name="Admin" />
         <Form store={this.props.store} />
       </div>
     )
