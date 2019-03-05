@@ -1,61 +1,31 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { changeTitle, changeContent } from '../actions'
 
-class Form extends React.Component {
-  static async getInitialProps({ store }) {
-    console.log(store)
-  }
-
-  render() {
-    console.log(this.props)
-    return (
-      <div>
-        <form>
-          <label>
-            Title:
-            {/* <input
+const Form = props => {
+  console.log('form', props)
+  const { title, content, store, dispatch } = props
+  return (
+    <div>
+      <form>
+        <label>
+          Title:
+          <input
             value={title}
-            onChange={e => store.dispatch(changeTitle(e.target.value))}
-          /> */}
-          </label>
-          <label>
-            Content:
-            {/* <textarea
+            onChange={e => dispatch(changeTitle(e.target.value))}
+          />
+        </label>
+        <label>
+          Content:
+          <textarea
             value={content}
             onChange={e => store.dispatch(changeContent(e.target.value))}
-          /> */}
-          </label>
-          <button type="submit">submit</button>
-        </form>
-      </div>
-    )
-  }
+          />
+        </label>
+        <button type="submit">submit</button>
+      </form>
+    </div>
+  )
 }
 
-// const Form = ({ store }) => {
-//   // const { title, content } = store.getState().form
-//   console.log(store)
-//   return (
-//     <div>
-//       <form>
-//         <label>
-//           Title:
-//           {/* <input
-//             value={title}
-//             onChange={e => store.dispatch(changeTitle(e.target.value))}
-//           /> */}
-//         </label>
-//         <label>
-//           Content:
-//           {/* <textarea
-//             value={content}
-//             onChange={e => store.dispatch(changeContent(e.target.value))}
-//           /> */}
-//         </label>
-//         <button type="submit">submit</button>
-//       </form>
-//     </div>
-//   )
-// }
-
-export default Form
+export default connect()(Form)
