@@ -5,8 +5,8 @@ const BlogList = props => {
   console.log('blogList', props)
   return (
     <div>
-      <h2>{props.title}</h2>
-      <p>content</p>
+      <h2>{props.form.title}</h2>
+      <p>{props.form.content}</p>
     </div>
   )
 }

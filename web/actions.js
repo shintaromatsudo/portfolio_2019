@@ -1,12 +1,17 @@
+import { createAction } from 'redux-actions'
+
 // 文字列定数
 export const CHANGE_TITLE = 'CHANGE_TITLE'
 export const CHANGE_CONTENT = 'CHANGE_CONTENT'
 export const INITIALIZE_FORM = 'INITIALIZE_FORM'
 export const INCREMENT = 'INCREMENT'
 export const DECREMENT = 'DECREMENT'
+export const RESET = 'RESET'
 export const ADD_TODO = 'ADD_TODO'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const TOGGLE_TODO = 'TOGGLE_TODO'
+export const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
+export const RESET_ASYNC = 'RESET_ASYNC'
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
@@ -35,6 +40,11 @@ export const decrement = () => ({
   count: -1
 })
 
+export const reset = () => ({
+  type: RESET,
+  count: 0
+})
+
 let nextTodoId = 0
 export const addTodo = text => ({
   type: ADD_TODO,
@@ -51,3 +61,11 @@ export const toggleTodo = id => ({
   type: TOGGLE_TODO,
   id
 })
+
+// export const incrementAsync = () => ({
+//   type: INCREMENT_ASYNC
+// })
+
+export const incrementAsync = createAction(INCREMENT_ASYNC)
+
+export const resetAsync = createAction(RESET_ASYNC)

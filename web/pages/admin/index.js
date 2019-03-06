@@ -4,21 +4,15 @@ import Button from '../../components/Button'
 import BlogList from '../../components/BlogList'
 
 class Admin extends React.Component {
-  static async getInitialProps({ store }) {
-    const { getState, dispatch } = store
-    const { title, content } = getState().form
-    return { title, content }
-  }
-
   render() {
     console.log('admin', this.props)
     return (
       <div>
         <Button href="admin/post" name="Post" />
-        <BlogList title={this.props.title} />
+        <BlogList />
       </div>
     )
   }
 }
 
-export default connect(state => state)(Admin)
+export default connect(state => state)(BlogList)

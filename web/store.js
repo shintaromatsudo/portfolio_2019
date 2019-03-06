@@ -1,35 +1,34 @@
-import { createStore } from 'redux'
-// import { createStore, applyMiddleware } from 'redux'
-// import { devToolsEnhancer } from 'redux-devtools-extension'
-// import createSagaMiddleware from 'redux-saga'
+import { createStore, applyMiddleware } from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import logger from 'redux-logger'
 import rootReducer from './reducers'
-// import rootSaga from 'sagas'
+import rootSaga from './sagas'
 
-// const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware()
 
-// const bindMiddleware = middleware => {
-//   return applyMiddleware(...middleware)
-// }
-export const initStore = initialState => {
-  return createStore(rootReducer, initialState)
+const bindMiddleware = middleware => {
+  return applyMiddleware(...middleware)
 }
-// function configureStore(initialState) {
-//   const store = createStore(rootReducer, initialState, devToolsEnhancer({}))
 
-// function configureStore(initialState) {
-//   const store = createStore(
-//     rootReducer,
-//     initialState,
-//     bindMiddleware([sagaMiddleware]),
-//     devToolsEnhancer({})
-//   )
-
-// store.runSagaTask = () => {
-//   store.sagaTask = sagaMiddleware.run(rootSaga)
+// export const initStore = initialState => {
+//   return createStore(rootReducer, initialState)
 // }
 
-//   store.runSagaTask()
-//   return store
-// }
+function configureStore(initialState) {
+  const store = createStore(
+    rootReducer,
+    initialState,
+    bindMiddleware([sagaMiddleware, logger])
+  )
 
-// export default configureStore
+  store.sagaTask = sagaMiddleware.run(rootSaga)
+
+  // store.runSagaTask = () => {
+  //   store.sagaTask = sagaMiddleware.run(rootSaga)
+  // }
+
+  // store.runSagaTask()
+  return store
+}
+
+export default configureStore

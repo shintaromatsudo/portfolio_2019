@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Layout from '../components/Layout'
-import { increment, decrement } from '../actions'
+import { increment, decrement, incrementAsync, resetAsync } from '../actions'
 
 const homeStyle = {
   fontSize: 20
@@ -10,19 +10,30 @@ const homeStyle = {
 
 class Home extends React.Component {
   // static async getInitialProps({ store }) {
-  //   const { getState, dispatch } = store
-  //   const { title, content } = getState().form
-  //   return { title, content }
+  //   const { dispatch } = store
+  //   dispatch(incrementAsync())
+  // }
+  // onClickAsync = () => {
+  //   this.props.dispatch(incrementAsync())
   // }
   render() {
-    const { count, onClickPlus, onClickMinus } = this.props
+    const {
+      count,
+      onClickPlus,
+      onClickMinus,
+      onClickAsync,
+      onClickReset
+    } = this.props
     console.log(this.props)
+    // const { count, dispatch } = this.props
     return (
       <Layout>
         <p style={homeStyle}>こんにちは</p>
         <span>counter:{count}</span>
         <button onClick={onClickPlus}>+</button>
         <button onClick={onClickMinus}>-</button>
+        <button onClick={onClickAsync}>Async</button>
+        <button onClick={onClickReset}>Reset</button>
       </Layout>
     )
   }
@@ -30,7 +41,7 @@ class Home extends React.Component {
 
 Home.propTypes = {
   count: PropTypes.number.isRequired,
-  onClickPlus: PropTypes.func.isRequired
+  onClickAsync: PropTypes.func.isRequired
 }
 
 // Containers
@@ -61,6 +72,12 @@ const mapDispatchToProps = dispatch => ({
   },
   onClickMinus: () => {
     dispatch(decrement())
+  },
+  onClickAsync: () => {
+    dispatch(incrementAsync())
+  },
+  onClickReset: () => {
+    dispatch(resetAsync())
   }
 })
 

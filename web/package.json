@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "next": "^8.0.3",
@@ -23,7 +24,9 @@
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
     "redux": "^4.0.1",
+    "redux-actions": "^2.6.5",
     "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
     "redux-saga": "^1.0.1"
   }
 }
