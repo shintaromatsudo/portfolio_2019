@@ -1,14 +1,33 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { fetchData } from '../actions'
+import Blog from './Blog'
 
-const BlogList = props => {
-  // const { title, content } = store.getState()
-  console.log('blogList', props)
-  return (
-    <div>
-      <h2>{props.form.title}</h2>
-      <p>{props.form.content}</p>
-    </div>
-  )
+class BlogList extends React.Component {
+  componentDidMount() {
+    this.props.fetchData()
+  }
+
+  render() {
+    const datas = this.props.fetchBlogData.data
+    console.log(datas)
+    return (
+      <div>
+        <ul>
+          {datas.map(data => (
+            <Blog key={data.id} {...data} />
+          ))}
+        </ul>
+      </div>
+    )
+  }
 }
 
-export default BlogList
+const mapDispatchToProps = dispatch => ({
+  fetchData: () => dispatch(fetchData())
+})
+
+export default connect(
+  state => state,
+  mapDispatchToProps
+)(BlogList)

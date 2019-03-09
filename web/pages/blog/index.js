@@ -1,67 +1,29 @@
 import React from 'react'
-// import fetch from 'isomorphic-fetch'
-
-// import Layout from '../../components/Layout'
-// import Link from 'next/link'
-
-// const PostLink = props => (
-//   <li>
-//     <Link as={`/blog/${props.id}`} href={`/blog/post?title=${props.title}`}>
-//       <a>{props.title}</a>
-//     </Link>
-//   </li>
-// )
-
-// export default () => (
-//   <Layout>
-//     <h1>Blog</h1>
-//     <ui>
-//       <PostLink id="1" title="Shintaro" />
-//       <PostLink id="2" title="Misa" />
-//       <PostLink id="3" title="Sara" />
-//     </ui>
-//   </Layout>
-// )
+import { connect } from 'react-redux'
+// import BlogList from '../../components/BlogList'
+import Blogs from '../../containers/Blogs'
 
 class Blog extends React.Component {
-  //   constructor(props) {
-  //     super(props)
-  //     console.log(props)
-  //     this.state = {
-  //       blogs: []
-  //     }
-
-  //     this.loadAjax = this.loadAjax.bind(this)
-  //   }
-
-  //   loadAjax() {
-  //     return fetch(this.props.url)
-  //       .then(response => response.json())
-  //       .then(responseJson =>
-  //         this.setState({
-  //           blogs: responseJson.blogs
-  //         })
-  //       )
-  //       .catch(error => {
-  //         console.error(error)
-  //       })
-  //   }
-
-  //   componentWillMount() {
-  //     this.loadAjax()
-  //   }
-
   render() {
-    //     const blog_list = this.state.blogs.map(e => <li>{e.title}</li>)
-    //     console.log(this.props)
-    //     console.log(this.state)
     return (
-      //       <React.Fragment>
-      <h1>Blog</h1>
-      //         <ul>{blog_list}</ul>
-      //       </React.Fragment>
+      <div className="Blog">
+        <h2>BLOG</h2>
+        {/* <BlogList /> */}
+        <Blogs />
+      </div>
     )
   }
 }
 
+// const mapStateToProps = state => ({
+//   state: state
+// })
+
+// const mapDispatchToProps = dispatch => ({
+//   fetchData: () => dispatch(fetchData())
+// })
 export default Blog
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(BlogList)

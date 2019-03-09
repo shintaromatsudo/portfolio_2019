@@ -9,13 +9,6 @@ const homeStyle = {
 }
 
 class Home extends React.Component {
-  // static async getInitialProps({ store }) {
-  //   const { dispatch } = store
-  //   dispatch(incrementAsync())
-  // }
-  // onClickAsync = () => {
-  //   this.props.dispatch(incrementAsync())
-  // }
   render() {
     const {
       count,
@@ -43,24 +36,6 @@ Home.propTypes = {
   count: PropTypes.number.isRequired,
   onClickAsync: PropTypes.func.isRequired
 }
-
-// Containers
-// function mapStateToProps(state) {
-//   return {
-//     count: state.count
-//   }
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     onClickPlus: () => {
-//       dispatch(increment())
-//     },
-//     onClickMinus: () => {
-//       dispatch(decrement())
-//     }
-//   }
-// }
 
 const mapStateToProps = state => ({
   count: state.count

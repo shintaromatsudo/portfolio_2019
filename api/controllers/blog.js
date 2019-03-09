@@ -4,10 +4,15 @@ var models = require('../models')
  * show all blog list
  */
 exports.index = function(req, res, next) {
-  models.Blog.all().then(blogs => {
-    res.json({ blogs: blogs })
-  })
+  res.json([
+    { id: 0, title: 'first', content: 'a' },
+    { id: 1, title: 'second', content: 'b' }
+  ])
 }
+// exports.index = async (req, res, next) => {
+//   let blogs = await models.Blog.all()
+//   res.json(blogs)
+// }
 
 /**
  * show blog details

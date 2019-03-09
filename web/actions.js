@@ -12,6 +12,11 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const TOGGLE_TODO = 'TOGGLE_TODO'
 export const INCREMENT_ASYNC = 'INCREMENT_ASYNC'
 export const RESET_ASYNC = 'RESET_ASYNC'
+
+export const REQUEST_FETCH = 'REQUEST_FETCH'
+export const SUCCEEDED_FETCH = 'SUCCEEDED_FETCH'
+export const FAILED_FETCH = 'FAILED_FETCH'
+
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
@@ -69,3 +74,7 @@ export const toggleTodo = id => ({
 export const incrementAsync = createAction(INCREMENT_ASYNC)
 
 export const resetAsync = createAction(RESET_ASYNC)
+
+export const fetchData = () => ({ type: REQUEST_FETCH })
+export const success = payload => ({ type: SUCCEEDED_FETCH, payload })
+export const fail = message => ({ type: FAILED_FETCH, message })
