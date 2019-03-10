@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Blog = ({ title, content }) => (
-  <React.Fragment>
-    <li>{title}</li>
-    <li>{content}</li>
-  </React.Fragment>
+  <div>
+    <h2>{title}</h2>
+    <p>{content}</p>
+  </div>
 )
 
 Blog.propTypes = {

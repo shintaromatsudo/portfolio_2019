@@ -13,11 +13,9 @@ class BlogList extends React.Component {
     console.log(datas)
     return (
       <div>
-        <ul>
-          {datas.map(data => (
-            <Blog key={data.id} {...data} />
-          ))}
-        </ul>
+        {datas.map(data => (
+          <Blog key={data.id} {...data} />
+        ))}
       </div>
     )
   }

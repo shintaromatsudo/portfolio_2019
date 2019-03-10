@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/shintaromatsudo/portfolio/issues"
   },
-  "homepage": "https://github.com/shintaromatsudo/portfolio#readme"
+  "homepage": "https://github.com/shintaromatsudo/portfolio#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4"
+  }
 }

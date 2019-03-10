@@ -4,14 +4,15 @@ var models = require('../models')
  * show all blog list
  */
 exports.index = function(req, res, next) {
-  res.json([
-    { id: 0, title: 'first', content: 'a' },
-    { id: 1, title: 'second', content: 'b' }
-  ])
+  models.Blog.all().then(blogs => {
+    res.json({ blogs: blogs })
+  })
 }
-// exports.index = async (req, res, next) => {
-//   let blogs = await models.Blog.all()
-//   res.json(blogs)
+// exports.index = function(req, res, next) {
+//   res.json([
+//     { id: 0, title: 'first', content: 'a' },
+//     { id: 1, title: 'second', content: 'b' }
+//   ])
 // }
 
 /**
@@ -27,15 +28,7 @@ exports.show = function(req, res, next) {
  * create blog
  */
 exports.create = function(req, res, next) {
-  var properties = [
-    'name',
-    'department',
-    'gender',
-    'birth',
-    'joined_date',
-    'payment',
-    'note'
-  ]
+  var properties = ['title', 'content']
   var new_values = {}
   properties.forEach(function(prop) {
     new_values[prop] = req.body[prop]
