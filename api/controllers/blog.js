@@ -1,12 +1,22 @@
-var models = require('../models')
+var Blog = require('../models').blog
 
 /**
  * show all blog list
  */
 exports.index = function(req, res, next) {
-  models.Blog.all().then(blogs => {
-    res.json({ blogs: blogs })
-  })
+  Blog.findAll()
+    .then(blogs => {
+      if (blogs && blogs.length > 0) {
+        res.json({ blogs })
+      } else {
+        res.status(204)
+        res.send()
+      }
+    })
+    .catch(e => {
+      res.status(409)
+      res.json(e)
+    })
 }
 // exports.index = function(req, res, next) {
 //   res.json([

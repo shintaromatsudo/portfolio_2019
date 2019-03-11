@@ -10,6 +10,7 @@ class BlogList extends React.Component {
 
   render() {
     const datas = this.props.fetchBlogData.data
+    const blogs = datas.blogs
     console.log(datas)
     return (
       <div>

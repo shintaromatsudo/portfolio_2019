@@ -12,7 +12,7 @@ const fetchBlogData = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        data: action.payload
+        data: action.payload.blogs
       }
     case FAILED_FETCH:
       return {
