@@ -1,10 +1,11 @@
-var Blog = require('../models').blog
+var models = require('../models')
 
 /**
  * show all blog list
  */
 exports.index = function(req, res, next) {
-  Blog.findAll()
+  models.blog
+    .findAll()
     .then(blogs => {
       if (blogs && blogs.length > 0) {
         res.json({ blogs })
@@ -38,15 +39,29 @@ exports.show = function(req, res, next) {
  * create blog
  */
 exports.create = function(req, res, next) {
-  var properties = ['title', 'content']
-  var new_values = {}
-  properties.forEach(function(prop) {
-    new_values[prop] = req.body[prop]
-  })
-  models.Blog.create(new_values).then(new_blog => {
-    res.redirect(302, '/blogs')
-  })
+  console.log(req)
+  const data = req.query
+  console.log(data)
+  models.blog
+    .create(data)
+    .then(new_blog => {
+      res.redirect(302, '/blogs')
+    })
+    .catch(e => {
+      res.status(409)
+      res.json(e)
+    })
 }
+// exports.create = function(req, res, next) {
+//   var properties = ['title', 'content']
+//   var new_values = {}
+//   properties.forEach(function(prop) {
+//     new_values[prop] = req.body[prop]
+//   })
+//   Blog.create(new_values).then(new_blog => {
+//     res.redirect(302, '/blogs')
+//   })
+// }
 
 /**
  * update blog

@@ -5,10 +5,13 @@ import {
   RESET_ASYNC,
   reset,
   REQUEST_FETCH,
-  success,
-  fail
+  successFetch,
+  failFetch,
+  REQUEST_POST,
+  successPost,
+  failPost
 } from '../actions'
-import getBlogs from '../API'
+import { getBlogs, postBlog } from '../API'
 
 function* incrementAsync() {
   yield delay(500)
@@ -23,9 +26,22 @@ function* fetchData() {
   try {
     const payload = yield call(getBlogs)
     console.log(payload)
-    yield put(success(payload.data))
+    yield put(successFetch(payload.data))
   } catch (e) {
-    yield put(fail(e.message))
+    yield put(failFetch(e.message))
+  }
+}
+
+function* postData({ payload }) {
+  try {
+    const { title, content } = payload
+    console.log(title)
+    console.log(content)
+    const responceData = yield call(postBlog, { title, content })
+    console.log(responceData)
+    yield put(successPost(responceData.data))
+  } catch (e) {
+    yield put(failPost(e.message))
   }
 }
 
@@ -33,6 +49,7 @@ export default function* rootSaga() {
   yield all([
     takeEvery(INCREMENT_ASYNC, incrementAsync),
     takeEvery(RESET_ASYNC, resetAsync),
-    takeEvery(REQUEST_FETCH, fetchData)
+    takeEvery(REQUEST_FETCH, fetchData),
+    takeEvery(REQUEST_POST, postData)
   ])
 }

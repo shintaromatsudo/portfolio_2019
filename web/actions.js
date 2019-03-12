@@ -16,6 +16,9 @@ export const RESET_ASYNC = 'RESET_ASYNC'
 export const REQUEST_FETCH = 'REQUEST_FETCH'
 export const SUCCEEDED_FETCH = 'SUCCEEDED_FETCH'
 export const FAILED_FETCH = 'FAILED_FETCH'
+export const REQUEST_POST = 'REQUEST_POST'
+export const SUCCEEDED_POST = 'SUCCEEDED_POST'
+export const FAILED_POST = 'FAILED_POST'
 
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
@@ -76,5 +79,8 @@ export const incrementAsync = createAction(INCREMENT_ASYNC)
 export const resetAsync = createAction(RESET_ASYNC)
 
 export const fetchData = () => ({ type: REQUEST_FETCH })
-export const success = payload => ({ type: SUCCEEDED_FETCH, payload })
-export const fail = message => ({ type: FAILED_FETCH, message })
+export const successFetch = payload => ({ type: SUCCEEDED_FETCH, payload })
+export const failFetch = message => ({ type: FAILED_FETCH, message })
+export const postData = payload => ({ type: REQUEST_POST, payload })
+export const successPost = payload => ({ type: SUCCEEDED_POST, payload })
+export const failPost = message => ({ type: FAILED_POST, message })

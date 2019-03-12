@@ -2,7 +2,7 @@ import { CHANGE_TITLE, CHANGE_CONTENT, INITIALIZE_FORM } from '../actions'
 
 const initialState = {
   form: {
-    title: 'タイトル',
+    title: '',
     content: ''
   }
 }
