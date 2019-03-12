@@ -39,9 +39,7 @@ exports.show = function(req, res, next) {
  * create blog
  */
 exports.create = function(req, res, next) {
-  console.log(req)
   const data = req.query
-  console.log(data)
   models.blog
     .create(data)
     .then(new_blog => {

@@ -25,7 +25,6 @@ function* resetAsync() {
 function* fetchData() {
   try {
     const payload = yield call(getBlogs)
-    console.log(payload)
     yield put(successFetch(payload.data))
   } catch (e) {
     yield put(failFetch(e.message))
@@ -35,10 +34,7 @@ function* fetchData() {
 function* postData({ payload }) {
   try {
     const { title, content } = payload
-    console.log(title)
-    console.log(content)
     const responceData = yield call(postBlog, { title, content })
-    console.log(responceData)
     yield put(successPost(responceData.data))
   } catch (e) {
     yield put(failPost(e.message))

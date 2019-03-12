@@ -17,8 +17,6 @@ class Home extends React.Component {
       onClickAsync,
       onClickReset
     } = this.props
-    console.log(this.props)
-    // const { count, dispatch } = this.props
     return (
       <Layout>
         <p style={homeStyle}>こんにちは</p>
