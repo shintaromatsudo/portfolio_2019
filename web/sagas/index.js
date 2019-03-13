@@ -46,7 +46,8 @@ function* fetchData() {
 
 function* postData({ payload }) {
   try {
-    const { title, content } = payload
+    const { id, title, content } = payload
+    if (!id)
     console.log(title)
     console.log(content)
     const responceData = yield call(postBlog, { title, content })

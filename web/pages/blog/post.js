@@ -1,17 +1,11 @@
-import { withRouter } from 'next/router'
-import Layout from '../../components/Layout'
+import React from 'react'
+import { connect } from 'react-redux'
 
-const Content = withRouter(props => (
+const Detail = ({ title, content }) => (
   <div>
-    <h1>{props.router.query.title}</h1>
-    <p>This is the blog post content.</p>
+    <h3>{title}</h3>
+    <p>{content}</p>
   </div>
-))
-
-const Page = props => (
-  <Layout>
-    <Content />
-  </Layout>
 )
 
-export default Page
+export default Detail

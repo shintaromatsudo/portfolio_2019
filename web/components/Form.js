@@ -8,6 +8,7 @@ class Form extends React.Component {
     super(props)
     console.log(props)
   }
+  
   handleSubmit(e) {
     e.preventDefault()
     console.log(this.props)
@@ -39,6 +40,7 @@ class Form extends React.Component {
               onChange={e => dispatch(changeContent(e.target.value))}
             />
           </label>
+          <input type='hidden' value={id} />
           <button type="submit">submit</button>
         </form>
       </div>
