@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import Blogs from '../../containers/Blogs'
 
 class Blog extends React.Component {

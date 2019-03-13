@@ -1,10 +1,20 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
-const Detail = ({ title, content }) => (
-  <div>
-    <h3>{title}</h3>
-    <p>{content}</p>
-  </div>
-)
+const Detail = props => {
+  console.log(props)
+  return (
+    <div>
+      <p>aaa</p>
+    </div>
+  )
+}
 
-export default Detail
+const mapDispatchToProps = dispatch => ({
+  detailData: () => dispatch(detailData())
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Detail)

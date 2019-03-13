@@ -1,12 +1,17 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Router } from '../routes'
+import { detailData } from '../actions'
 
 const Blog = props => {
   const { id, title, content } = props
+  console.log(props)
 
   const onClick = e => {
     e.preventDefault()
+    // props.detailData(id)
+    console.log(id)
     Router.pushRoute(`/blog/${id}`)
   }
 
@@ -24,4 +29,11 @@ Blog.propTypes = {
   content: PropTypes.string.isRequired
 }
 
-export default Blog
+const mapDispatchToProps = dispatch => ({
+  detailData: () => dispatch(detailData())
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Blog)

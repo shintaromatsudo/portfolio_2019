@@ -9,9 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <html>
-        <Head>
-          <style>{``}</style>
-        </Head>
+        <head>
+          <title>SHINTARO MATSUDO</title>
+        </head>
         <body className="">
           <Main />
           <NextScript />
