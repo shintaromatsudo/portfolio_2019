@@ -19,6 +19,15 @@ export const FAILED_FETCH = 'FAILED_FETCH'
 export const REQUEST_POST = 'REQUEST_POST'
 export const SUCCEEDED_POST = 'SUCCEEDED_POST'
 export const FAILED_POST = 'FAILED_POST'
+export const REQUEST_DETAIL = 'REQUEST_DETAIL'
+export const SUCCEEDED_DETAIL = 'SUCCEEDED_DETAIL'
+export const FAILED_DETAIL = 'FAILED_DETAIL'
+export const REQUEST_UPDATE = 'REQUEST_UPDATE'
+export const SUCCEEDED_UPDATE = 'SUCCEEDED_UPDATE'
+export const FAILED_UPDATE = 'FAILED_UPDATE'
+export const REQUEST_DELETE = 'REQUEST_DELETE'
+export const SUCCEEDED_DELETE = 'SUCCEEDED_DELETE'
+export const FAILED_DELETE = 'FAILED_DELETE'
 
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
@@ -81,6 +90,19 @@ export const resetAsync = createAction(RESET_ASYNC)
 export const fetchData = () => ({ type: REQUEST_FETCH })
 export const successFetch = payload => ({ type: SUCCEEDED_FETCH, payload })
 export const failFetch = message => ({ type: FAILED_FETCH, message })
+
 export const postData = payload => ({ type: REQUEST_POST, payload })
 export const successPost = payload => ({ type: SUCCEEDED_POST, payload })
 export const failPost = message => ({ type: FAILED_POST, message })
+
+export const detailData = payload => ({ type: REQUEST_DETAIL, payload })
+export const successDetail = payload => ({ type: SUCCEEDED_DETAIL, payload })
+export const failDetail = message => ({ type: FAILED_DETAIL, message })
+
+export const updateData = payload => ({ type: REQUEST_UPDATE, payload })
+export const successUpdate = payload => ({ type: SUCCEEDED_UPDATE, payload })
+export const failUpdate = message => ({ type: FAILED_UPDATE, message })
+
+export const deleteData = payload => ({ type: REQUEST_DELETE, payload })
+export const successDelete = payload => ({ type: SUCCEEDED_DELETE, payload })
+export const failDelete = message => ({ type: FAILED_DELETE, message })

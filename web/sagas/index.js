@@ -9,9 +9,18 @@ import {
   failFetch,
   REQUEST_POST,
   successPost,
-  failPost
+  failPost,
+  REQUEST_DETAIL,
+  successDetail,
+  failDetail,
+  REQUEST_UPDATE,
+  successUpdate,
+  failUpdate,
+  REQUEST_DELETE,
+  successDelete,
+  failDelete
 } from '../actions'
-import { getBlogs, postBlog } from '../API'
+import { getBlogs, postBlog, getBlog, updateBlog, deleteBlog } from '../API'
 
 function* incrementAsync() {
   yield delay(500)
@@ -33,11 +42,47 @@ function* fetchData() {
 
 function* postData({ payload }) {
   try {
-    const { title, content } = payload
+    const { id, title, content } = payload
+    console.log(id)
+    console.log(title)
+    console.log(content)
     const responceData = yield call(postBlog, { title, content })
     yield put(successPost(responceData.data))
   } catch (e) {
     yield put(failPost(e.message))
+  }
+}
+
+function* fetchDetail({ payload }) {
+  try {
+    const { id } = payload
+    console.log(id)
+    const responceData = yield call(getBlog, { id })
+    yield put(successDetail(responceData.data))
+  } catch (e) {
+    yield put(failDetail(e.message))
+  }
+}
+
+function* updateData({ payload }) {
+  try {
+    const { id } = payload
+    console.log(id)
+    const responceData = yield call(updateBlog, { id })
+    yield put(successUpdate(responceData.data))
+  } catch (e) {
+    yield put(failUpdate(e.message))
+  }
+}
+
+function* deleteData({ payload }) {
+  try {
+    const { id } = payload
+    console.log(id)
+    const responceData = yield call(deleteBlog, { id })
+    yield put(successDelete(responceData.data))
+  } catch (e) {
+    yield put(failDelete(e.message))
   }
 }
 
@@ -46,6 +91,9 @@ export default function* rootSaga() {
     takeEvery(INCREMENT_ASYNC, incrementAsync),
     takeEvery(RESET_ASYNC, resetAsync),
     takeEvery(REQUEST_FETCH, fetchData),
-    takeEvery(REQUEST_POST, postData)
+    takeEvery(REQUEST_POST, postData),
+    takeEvery(REQUEST_DETAIL, fetchDetail),
+    takeEvery(REQUEST_UPDATE, updateData),
+    takeEvery(REQUEST_DELETE, deleteData)
   ])
 }
