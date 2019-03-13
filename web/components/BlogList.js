@@ -10,9 +10,10 @@ class BlogList extends React.Component {
 
   render() {
     const datas = this.props.fetchBlogData.data
+    const reverseDatas = datas.reverse()
     return (
       <div>
-        {datas.map(data => (
+        {reverseDatas.map(data => (
           <Blog key={data.id} {...data} />
         ))}
       </div>

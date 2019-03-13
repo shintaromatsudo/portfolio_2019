@@ -6,8 +6,9 @@ import { changeTitle, changeContent, postData } from '../actions'
 class Form extends React.Component {
   constructor(props) {
     super(props)
+    console.log(props)
   }
-  
+
   handleSubmit(e) {
     e.preventDefault()
     this.props.dispatch(postData(this.props.form))
@@ -16,6 +17,7 @@ class Form extends React.Component {
 
   render() {
     const { title, content, dispatch } = this.props
+    console.log(this.props)
     return (
       <div>
         <form
@@ -37,7 +39,7 @@ class Form extends React.Component {
               onChange={e => dispatch(changeContent(e.target.value))}
             />
           </label>
-          <input type='hidden' value={id} />
+          {/* <input type="hidden" value={id} /> */}
           <button type="submit">submit</button>
         </form>
       </div>

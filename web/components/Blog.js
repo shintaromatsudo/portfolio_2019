@@ -1,21 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from './Button'
+import { Router } from '../routes'
 
-const Blog = ({ props }) => {
-  console.log(props)
-  const { title, content } = props
+const Blog = props => {
+  const { id, title, content } = props
+
+  const onClick = e => {
+    e.preventDefault()
+    Router.pushRoute(`/blog/${id}`)
+  }
+
   return (
     <div>
-      <Button href="admin/post" name="Post" {...props} />
       <h2>{title}</h2>
       <p>{content}</p>
+      <button onClick={onClick}>MORE</button>
     </div>
   )
 }
 
 Blog.propTypes = {
-  // id: Proptypes.intefer.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired
 }
