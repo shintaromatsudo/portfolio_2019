@@ -9,9 +9,21 @@ import {
   failFetch,
   REQUEST_POST,
   successPost,
-  failPost
+  failPost,
+  REQUEST_DETAIL,
+  successDetail,
+  failDetail,
+  REQUEST_DETAIL,
+  successDetail,
+  failDetail,
+  REQUEST_UPDATE,
+  successUpdate,
+  failUpdate,
+  REQUEST_DELETE,
+  succesDelete,
+  failDelete
 } from '../actions'
-import { getBlogs, postBlog } from '../API'
+import { getBlogs, postBlog, getBlog, updateBlog, deleteBlog } from '../API'
 
 function* incrementAsync() {
   yield delay(500)
@@ -45,11 +57,47 @@ function* postData({ payload }) {
   }
 }
 
+function* fetchDetail({ payload }) {
+  try {
+    const { id } = payload
+    console.log(id)
+    const responceData = yield call(getBlog, { id })
+    yield put(successDetail(responceData.data))
+  } catch (e) {
+    yield put(failDetail(e.message))
+  }
+}
+
+function* updateData({ payload }) {
+  try {
+    const { id } = payload
+    console.log(id)
+    const responceData = yield call(updateBlog, { id })
+    yield put(successUpdate(responceData.data))
+  } catch (e) {
+    yield put(failUpdate(e.message))
+  }
+}
+
+function* deleteData({ payload }) {
+  try {
+    const { id } = payload
+    console.log(id)
+    const responceData = yield call(deleteBlog, { id })
+    yield put(succesDelete(responceData.data))
+  } catch (e) {
+    yield put(failDelete(e.message))
+  }
+}
+
 export default function* rootSaga() {
   yield all([
     takeEvery(INCREMENT_ASYNC, incrementAsync),
     takeEvery(RESET_ASYNC, resetAsync),
     takeEvery(REQUEST_FETCH, fetchData),
-    takeEvery(REQUEST_POST, postData)
+    takeEvery(REQUEST_POST, postData),
+    takeEvery(REQUEST_DETAIL, fetchDetail),
+    takeEvery(REQUEST_UPDATE, updateData),
+    takeEvery(REQUEST_DELETE, deleteData)
   ])
 }

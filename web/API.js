@@ -17,3 +17,29 @@ export function postBlog(data) {
     params: data
   })
 }
+
+export function detailBlog(data) {
+  console.log(data)
+  return axios({
+    method: 'post',
+    url: 'http://localhost:5000/blogs/${data.id}',
+    params: data
+  })
+}
+
+export function updateBlog(data) {
+  console.log(data)
+  return axios({
+    method: 'post',
+    url: 'http://localhost:5000/blogs/${data.id}',
+    params: data
+  })
+}
+
+export function deleteBlog(data) {
+  return axios({
+    method: 'post',
+    url: 'http://localhost:5000/blogs/${data.id}',
+    params: data
+  })
+}
