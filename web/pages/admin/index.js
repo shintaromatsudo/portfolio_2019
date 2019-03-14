@@ -8,7 +8,6 @@ class Admin extends React.Component {
       <div>
         <Button href="admin/post" name="Post" />
         <Button href="admin/todo" name="Todo" />
-        <Button href="blog/detail" name="BLOGDETAIL" />
         <Blogs />
       </div>
     )

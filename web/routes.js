@@ -3,4 +3,4 @@ const routes = (module.exports = nextRoutes())
 
 routes.add('/', '/home')
 
-routes.add('/blog/:Id', '/blog/detail')
+routes.add('/blog/:id', '/blog/detail')

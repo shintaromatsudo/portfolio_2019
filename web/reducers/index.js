@@ -3,7 +3,7 @@ import count from './count'
 import form from './form'
 import todos from './todos'
 import visibilityFilter from './visibilityFilter'
-import fetchBlogData from './blogs'
+import { fetchBlogData } from './blogs'
 
 const rootReducer = combineReducers({
   count,

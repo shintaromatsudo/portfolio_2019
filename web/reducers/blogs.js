@@ -4,7 +4,7 @@ const initialState = {
   data: []
 }
 
-const fetchBlogData = (state = initialState, action) => {
+export const fetchBlogData = (state = initialState, action) => {
   switch (action.type) {
     case REQUEST_FETCH:
       return { ...state, fetching: true, error: null }
@@ -12,19 +12,17 @@ const fetchBlogData = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        data: action.payload.blogs
+        data: action.payload.blogs,
+        error: null
       }
     case FAILED_FETCH:
       return {
         ...state,
         fetching: false,
-        title: null,
-        content: null,
+        data: null,
         error: action.error
       }
     default:
       return state
   }
 }
-
-export default fetchBlogData

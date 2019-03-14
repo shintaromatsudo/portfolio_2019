@@ -42,10 +42,7 @@ function* fetchData() {
 
 function* postData({ payload }) {
   try {
-    const { id, title, content } = payload
-    console.log(id)
-    console.log(title)
-    console.log(content)
+    const { title, content } = payload
     const responceData = yield call(postBlog, { title, content })
     yield put(successPost(responceData.data))
   } catch (e) {
@@ -55,7 +52,7 @@ function* postData({ payload }) {
 
 function* fetchDetail({ payload }) {
   try {
-    const { id } = payload
+    const id = payload
     console.log(id)
     const responceData = yield call(getBlog, { id })
     yield put(successDetail(responceData.data))

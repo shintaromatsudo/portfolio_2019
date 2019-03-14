@@ -24,10 +24,12 @@ exports.index = function(req, res, next) {
  * show blog details
  */
 exports.show = function(req, res, next) {
-  models.blog.findById(req.params.id).then(blog => {
-    res.json({ blog })
-  })
-  .catch(e => {
+  models.blog
+    .findById(req.params.id)
+    .then(blog => {
+      res.json({ blog })
+    })
+    .catch(e => {
       res.status(409)
       res.json(e)
     })
@@ -77,9 +79,11 @@ exports.update = function(req, res, next) {
  * destroy blog
  */
 exports.destroy = function(req, res, next) {
-  models.blog.destroy({
-    where: { id: req.params.id }
-  }).then(blog => {
-    res.redirect(302, '/blogs')
-  })
+  models.blog
+    .destroy({
+      where: { id: req.params.id }
+    })
+    .then(blog => {
+      res.redirect(302, '/blogs')
+    })
 }

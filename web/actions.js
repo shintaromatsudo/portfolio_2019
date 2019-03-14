@@ -95,7 +95,7 @@ export const postData = payload => ({ type: REQUEST_POST, payload })
 export const successPost = payload => ({ type: SUCCEEDED_POST, payload })
 export const failPost = message => ({ type: FAILED_POST, message })
 
-export const detailData = payload => ({ type: REQUEST_DETAIL, payload })
+export const detailData = id => ({ type: REQUEST_DETAIL, id })
 export const successDetail = payload => ({ type: SUCCEEDED_DETAIL, payload })
 export const failDetail = message => ({ type: FAILED_DETAIL, message })
 

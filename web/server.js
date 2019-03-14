@@ -6,12 +6,14 @@ const routes = require('./routes')
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
-const handle = routes.getRequestHandler(app)
+const handle = app.getRequestHandler()
+const handler = routes.getRequestHandler(app)
 
 app
   .prepare()
   .then(() => {
     const server = express()
+    server.use(handler)
 
     server.use(cookieParser())
 
