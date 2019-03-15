@@ -39,6 +39,9 @@ class Form extends React.Component {
               onChange={e => dispatch(changeContent(e.target.value))}
             />
           </label>
+          <label>
+            <input type="file" value={image} />
+          </label>
           {/* <input type="hidden" value={id} /> */}
           <button type="submit">submit</button>
         </form>

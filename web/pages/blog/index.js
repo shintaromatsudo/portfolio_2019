@@ -7,6 +7,11 @@ class Blog extends React.Component {
       <div className="Blog">
         <h2>BLOG</h2>
         <Blogs />
+        <style jsx>{`
+          .Blog {
+            margin: 50px;
+          }
+        `}</style>
       </div>
     )
   }

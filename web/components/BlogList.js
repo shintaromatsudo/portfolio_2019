@@ -12,10 +12,18 @@ class BlogList extends React.Component {
     const datas = this.props.fetchBlogData.data
     const reverseDatas = datas.reverse()
     return (
-      <div>
+      <div className="blog-list">
         {reverseDatas.map(data => (
           <Blog key={data.id} {...data} />
         ))}
+        <style jsx>{`
+          .blog-list {
+            display: grid;
+            gap: 50px;
+            grid-template-columns: repeat(auto-fill, 300px);
+            justify-content: center;
+          }
+        `}</style>
       </div>
     )
   }
