@@ -8,6 +8,10 @@ const Works = () => (
       .Works {
         margin: 70px;
       }
+      h1 {
+        margin: 70px;
+        text-align: center;
+      }
     `}</style>
   </div>
 )
