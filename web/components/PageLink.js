@@ -2,10 +2,20 @@ import Link from 'next/link'
 
 const PageLink = props => (
   <div>
-    <Link href={props.href}>
-      <a>{props.name}</a>
-    </Link>
-    
+    <p>{props.name}</p>
+    <style jsx>{`
+      div {
+        width: 150px;
+        height: 200px;
+        display: flex;
+        cursor: pointer;
+      }
+      p {
+        font-size: 30px;
+        color: black;
+        margin: auto;
+      }
+    `}</style>
   </div>
 )
 

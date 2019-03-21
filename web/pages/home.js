@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Layout from '../components/Layout'
+import PageLinks from '../components/PageLinks'
 import { increment, decrement, incrementAsync, resetAsync } from '../actions'
 
 const homeStyle = {
@@ -18,14 +18,15 @@ class Home extends React.Component {
       onClickReset
     } = this.props
     return (
-      <Layout>
+      <div>
+        <PageLinks />
         <p style={homeStyle}>こんにちは</p>
         <span>counter:{count}</span>
         <button onClick={onClickPlus}>+</button>
         <button onClick={onClickMinus}>-</button>
         <button onClick={onClickAsync}>Async</button>
         <button onClick={onClickReset}>Reset</button>
-      </Layout>
+      </div>
     )
   }
 }

@@ -17,16 +17,16 @@ class MyDocument extends Document {
             type="image/x-icon"
             href="../static/img/favicon.ico"
           />
+          <style>{`
+            body {
+              margin:0;
+            }
+          `}</style>
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-        <style jsx>{`
-          body {
-            background-color: blue;
-          }
-        `}</style>
       </html>
     )
   }
