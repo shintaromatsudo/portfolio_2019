@@ -293,15 +293,9 @@ const PageLinks = () => {
         @keyframes fillPink {
           0% {
             right: 96%;
-            opacity: 1;
-          }
-          90% {
-            right: 0%;
-            opacity: 1;
           }
           100% {
             right: 0%;
-            opacity: 0;
           }
         }
         @keyframes fillOrange {

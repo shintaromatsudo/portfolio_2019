@@ -5,16 +5,14 @@ const AboutLink = props => (
     <Link href={props.href}>
       <a>{props.name}</a>
     </Link>
-  </div>
-  <style jsx>{`
+    <style jsx>{`
     .AboutLink {
       width: 50px;
       height 50px;
-      font-weght: bold;
       color: black;
       background-color: white;
       border: 2px solid black;
-      border-radius: 50%
+      border-radius: 50%;
       transition: all 0.3s;
     }
     .AboutLink :hover {
@@ -22,7 +20,13 @@ const AboutLink = props => (
       background-color: black;
       border: 2px solid white;
     }
+    a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
   `}</style>
+  </div>
 )
 
 export default AboutLink
