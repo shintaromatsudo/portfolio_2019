@@ -40,7 +40,6 @@ const PageLinks = () => {
   const click = (colorId, colorClass, pathname) => {
     const elm = document.getElementById(colorId)
     elm.classList.add(colorClass)
-    console.log(colorClass)
     setTimeout(function() {
       Router.push({ pathname: pathname })
     }, 600)
@@ -294,25 +293,43 @@ const PageLinks = () => {
         @keyframes fillPink {
           0% {
             right: 96%;
+            opacity: 1;
+          }
+          90% {
+            right: 0%;
+            opacity: 1;
           }
           100% {
             right: 0%;
+            opacity: 0;
           }
         }
         @keyframes fillOrange {
           0% {
             left: 96%;
+            opacity: 1;
+          }
+          90% {
+            left: 0%;
+            opacity: 1;
           }
           100% {
             left: 0%;
+            opacity: 0;
           }
         }
         @keyframes fillBlue {
           0% {
             top: 96%;
+            opacity: 1;
+          }
+          90% {
+            top: 0%;
+            opacity: 1;
           }
           100% {
             top: 0%;
+            opacity: 0;
           }
         }
       `}</style>
