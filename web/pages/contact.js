@@ -16,6 +16,28 @@ const Contact = () => (
         margin: 70px;
         text-align: center;
       }
+      .blue {
+          position: fixed;
+          top: 100%;
+          width: 100vw;
+          height: 100vh;
+          z-index: 100;
+          cursor: pointer;
+          background-color: #2ca9e1;
+        visibility: visible;
+        animation: fadeBlue 0.3s linear 0s;
+        animation-fill-mode: forwards;
+        }
+        @keyframes fadeBlue {
+        0% {
+          opacity: 1;
+          visibility: visible;
+        }
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+        }
       .line {
         width: 30px;
         background-color: #01b901;

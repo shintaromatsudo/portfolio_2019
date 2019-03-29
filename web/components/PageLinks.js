@@ -1,5 +1,6 @@
 import Router from 'next/router'
 import PageLink from './PageLink'
+import LinkContact from './LinkContact'
 
 const PageLinks = () => {
   const hover = (pageId, colorId, pageClass, colorClass) => {
@@ -29,14 +30,6 @@ const PageLinks = () => {
     leave('blog', 'orange', 'hoverBlog', 'hoverOrange')
   }
 
-  const hoverContact = () => {
-    hover('contact', 'blue', 'hoverContact', 'hoverBlue')
-  }
-
-  const leaveContact = () => {
-    leave('contact', 'blue', 'hoverContact', 'hoverBlue')
-  }
-
   const click = (colorId, colorClass, pathname) => {
     const elm = document.getElementById(colorId)
     elm.classList.add(colorClass)
@@ -50,9 +43,6 @@ const PageLinks = () => {
 
   const clickBlog = () => {
     click('orange', 'clickOrange', '/blog')
-  }
-  const clickContact = () => {
-    click('blue', 'clickBlue', '/contact')
   }
 
   return (
@@ -77,16 +67,7 @@ const PageLinks = () => {
           <PageLink name="Blog" />
         </div>
       </div>
-      <div
-        onClick={clickContact}
-        onMouseEnter={hoverContact}
-        onMouseLeave={leaveContact}
-      >
-        <div id="blue" className="blue" />
-        <div id="contact">
-          <PageLink name="Contact" />
-        </div>
-      </div>
+      <LinkContact />
       <style jsx>{`
         #about {
           position: fixed;
@@ -100,21 +81,12 @@ const PageLinks = () => {
           top: 45%;
           transform: rotate(-90deg);
         }
-        #contact {
-          position: fixed;
-          left: 45%;
-          bottom: -70px;
-        }
         .hoverAbout {
           animation: bounceAbout 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
         .hoverBlog {
           animation: bounceBlog 0.5s linear 0s;
-          animation-fill-mode: forwards;
-        }
-        .hoverContact {
-          animation: bounceContact 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
         .pink {
@@ -137,15 +109,6 @@ const PageLinks = () => {
           cursor: pointer;
           background-color: #f08300;
         }
-        .blue {
-          position: fixed;
-          top: 100%;
-          width: 100vw;
-          height: 100vh;
-          z-index: 100;
-          cursor: pointer;
-          background-color: #2ca9e1;
-        }
         .hoverPink {
           animation: bouncePink 0.5s linear 0s;
           animation-fill-mode: forwards;
@@ -154,20 +117,12 @@ const PageLinks = () => {
           animation: bounceOrange 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
-        .hoverBlue {
-          animation: bounceBlue 0.5s linear 0s;
-          animation-fill-mode: forwards;
-        }
         .clickPink {
           animation: fillPink 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
         .clickOrange {
           animation: fillOrange 0.5s linear 0s;
-          animation-fill-mode: forwards;
-        }
-        .clickBlue {
-          animation: fillBlue 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
         @keyframes bounceAbout {
@@ -210,26 +165,6 @@ const PageLinks = () => {
             transform: translateX(-40%) rotate(-90deg);
           }
         }
-        @keyframes bounceContact {
-          0% {
-            transform: translateaY(-0%);
-          }
-          5% {
-            transform: translateY(-22%);
-          }
-          30% {
-            transform: translateY(-8%);
-          }
-          50% {
-            transform: translateY(-17%);
-          }
-          75% {
-            transform: translateY(-13%);
-          }
-          100% {
-            transform: translateY(-15%);
-          }
-        }
         @keyframes bouncePink {
           0% {
             right: 100%;
@@ -270,26 +205,6 @@ const PageLinks = () => {
             left: 96%;
           }
         }
-        @keyframes bounceBlue {
-          0% {
-            top: 100%;
-          }
-          5% {
-            top: 95%;
-          }
-          30% {
-            top: 97%;
-          }
-          50% {
-            top: 95.5%;
-          }
-          75% {
-            top: 96.5%;
-          }
-          100% {
-            top: 96%;
-          }
-        }
         @keyframes fillPink {
           0% {
             right: 96%;
@@ -309,20 +224,6 @@ const PageLinks = () => {
           }
           100% {
             left: 0%;
-            opacity: 0;
-          }
-        }
-        @keyframes fillBlue {
-          0% {
-            top: 96%;
-            opacity: 1;
-          }
-          90% {
-            top: 0%;
-            opacity: 1;
-          }
-          100% {
-            top: 0%;
             opacity: 0;
           }
         }

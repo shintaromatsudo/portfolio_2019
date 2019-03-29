@@ -1,12 +1,29 @@
+import React from 'react'
 import Link from 'next/link'
 
-const AboutLink = props => (
-  <div className="AboutLink">
-    <Link href={props.href}>
-      <a>{props.name}</a>
-    </Link>
+const AboutLink = props => {
+   const hover = () => {
+    const scrollToTop = document.getElementById('aboutLink')
+    scrollToTop.classList.add('hover')
+    scrollToTop.classList.remove('leave')
+  }
+
+  const leave = () => {
+    const scrollToTop = document.getElementById('aboutLink')
+    scrollToTop.classList.add('leave')
+    scrollToTop.classList.remove('hover')
+  }
+  return (
+    <React.Fragment>
+    <div id="aboutLink"
+        onMouseEnter={hover}
+        onMouseLeave={leave}>
+      <Link href={props.href}>
+        <a>{props.name}</a>
+      </Link>
+    </div>
     <style jsx>{`
-    .AboutLink {
+    #aboutLink {
       width: 50px;
       height 50px;
       color: black;
@@ -15,7 +32,7 @@ const AboutLink = props => (
       border-radius: 50%;
       transition: all 0.3s;
     }
-    .AboutLink :hover {
+    #aboutLink :hover {
       color: white;
       background-color: black;
       border: 2px solid white;
@@ -26,7 +43,8 @@ const AboutLink = props => (
       font-weight: bold;
     }
   `}</style>
-  </div>
+  </React.Fragment>
 )
+}
 
 export default AboutLink
