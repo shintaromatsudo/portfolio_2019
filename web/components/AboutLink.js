@@ -2,7 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 
 const AboutLink = props => {
-   const hover = () => {
+  const click = () => {
+    document.getElementById(props.id).click()
+  }
+
+  const hover = () => {
     const scrollToTop = document.getElementById('aboutLink')
     scrollToTop.classList.add('hover')
     scrollToTop.classList.remove('leave')
@@ -14,37 +18,46 @@ const AboutLink = props => {
     scrollToTop.classList.remove('hover')
   }
   return (
-    <React.Fragment>
-    <div id="aboutLink"
-        onMouseEnter={hover}
-        onMouseLeave={leave}>
+    <div
+      id="aboutLink"
+      onClick={click}
+      onMouseEnter={hover}
+      onMouseLeave={leave}
+    >
       <Link href={props.href}>
-        <a>{props.name}</a>
+        <a id={props.id}>{props.name}</a>
       </Link>
+      <style jsx>{`
+        #aboutLink {
+          width: 100px;
+          height 100px;
+          background-color: white;
+          border: 4px solid black;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+        #aboutLink :hover {
+          color: white;
+          background-color: black;
+          border: 2px solid white;
+        }
+        a {
+          color: black;
+          text-decoration: none;
+          font-weight: bold;
+        }
+        #aboutLink :hover a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+        }
+      `}</style>
     </div>
-    <style jsx>{`
-    #aboutLink {
-      width: 50px;
-      height 50px;
-      color: black;
-      background-color: white;
-      border: 2px solid black;
-      border-radius: 50%;
-      transition: all 0.3s;
-    }
-    #aboutLink :hover {
-      color: white;
-      background-color: black;
-      border: 2px solid white;
-    }
-    a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  `}</style>
-  </React.Fragment>
-)
+  )
 }
 
 export default AboutLink

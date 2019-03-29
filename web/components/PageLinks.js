@@ -35,7 +35,7 @@ const PageLinks = () => {
     elm.classList.add(colorClass)
     setTimeout(function() {
       Router.push({ pathname: pathname })
-    }, 600)
+    }, 500)
   }
   const clickAbout = () => {
     click('pink', 'clickPink', '/about')

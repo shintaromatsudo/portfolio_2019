@@ -1,6 +1,6 @@
 const FadeOutColor = props => (
   <div>
-    <div className="color" />
+    <div className="color" style={props.style} />
     <style jsx>{`
       .color {
         position: absolute;

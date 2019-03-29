@@ -1,27 +1,24 @@
-import Link from 'next/link'
+import React from 'react'
 import AboutLink from '../../components/AboutLink'
-import LinkHome from './LinkHome'
-import LinkContact from './LinkContact'
-import FadeOutColor from './FadeOutColor'
+import LinkHome from '../../components/LinkAboutToHome'
+import LinkContact from '../../components/LinkContact'
+import FadeOutColor from '../../components/FadeOutColor'
 
-// const style = {
-//   backgroundColor: #e95295;
-// }
+const style = {
+  backgroundColor: '#e95295'
+}
 
 const About = () => (
-  <div>
-    <FadeOutColor />
+  <React.Fragment>
+    <FadeOutColor style={style} />
     <p>About</p>
-    <AboutLink href={'/about/skills'} name={'SKILLS'} />
-    <AboutLink href={'/about/works'} name={'WORKS'} />
-    <AboutLink href={'/about/gallery'} name={'GALLERY'} />
+    <AboutLink id={'skills'} href={'/about/skills'} name={'SKILLS'} />
+    <AboutLink id={'works'} href={'/about/works'} name={'WORKS'} />
+    <AboutLink id={'gallery'} href={'/about/gallery'} name={'GALLERY'} />
+    <LinkHome />
     <LinkContact />
-    <style jsx>{`
-      .FadeOutColor {
-        background-color: #e95295;
-      }
-    `}</style>
-  </div>
+    <style jsx>{``}</style>
+  </React.Fragment>
 )
 
 export default About

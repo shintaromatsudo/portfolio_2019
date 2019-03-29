@@ -1,34 +1,45 @@
+import LinkHome from '../components/LinkContactToHome'
+import FadeOutColor from '../components/FadeOutColor'
+
+const style = {
+  backgroundColor: '#2ca9e1'
+}
+
 const Contact = () => (
-  <div className="contact">
-    <h1>Get In Touch</h1>
-    <p>
-      <a href="tel:080-5464-0880">電話</a>
-    </p>
-    <p>
-      <a href="mailto:misara2332@gmail.com">メール</a>
-    </p>
-    <div className="line">line</div>
-    <p className="github">github</p>
-    <p className="facebook">facebook</p>
-    <p className="instagram">Instagram</p>
+  <React.Fragment>
+    <FadeOutColor style={style} />
+    <div className="contact">
+      <h1>Get In Touch</h1>
+      <p>
+        <a href="tel:080-5464-0880">電話</a>
+      </p>
+      <p>
+        <a href="mailto:misara2332@gmail.com">メール</a>
+      </p>
+      <div className="line">line</div>
+      <p className="github">github</p>
+      <p className="facebook">facebook</p>
+      <p className="instagram">Instagram</p>
+    </div>
+    <LinkHome />
     <style jsx>{`
       h1 {
         margin: 70px;
         text-align: center;
       }
       .blue {
-          position: fixed;
-          top: 100%;
-          width: 100vw;
-          height: 100vh;
-          z-index: 100;
-          cursor: pointer;
-          background-color: #2ca9e1;
+        position: fixed;
+        top: 100%;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        cursor: pointer;
+        background-color: #2ca9e1;
         visibility: visible;
         animation: fadeBlue 0.3s linear 0s;
         animation-fill-mode: forwards;
-        }
-        @keyframes fadeBlue {
+      }
+      @keyframes fadeBlue {
         0% {
           opacity: 1;
           visibility: visible;
@@ -37,7 +48,7 @@ const Contact = () => (
           opacity: 0;
           visibility: hidden;
         }
-        }
+      }
       .line {
         width: 30px;
         background-color: #01b901;
@@ -53,7 +64,7 @@ const Contact = () => (
         color: #55acee;
       }
     `}</style>
-  </div>
+  </React.Fragment>
 )
 
 export default Contact

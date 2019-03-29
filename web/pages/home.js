@@ -3,9 +3,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import PageLinks from '../components/PageLinks'
 import { increment, decrement, incrementAsync, resetAsync } from '../actions'
+import FadeOutColor from '../components/FadeOutColor'
 
 const homeStyle = {
   fontSize: 20
+}
+
+const style = {
+  backgroundColor: '#00a968'
 }
 
 class Home extends React.Component {
@@ -18,7 +23,8 @@ class Home extends React.Component {
       onClickReset
     } = this.props
     return (
-      <div>
+      <React.Fragment>
+        <FadeOutColor style={style} />
         <PageLinks />
         <p style={homeStyle}>こんにちは</p>
         <span>counter:{count}</span>
@@ -26,7 +32,7 @@ class Home extends React.Component {
         <button onClick={onClickMinus}>-</button>
         <button onClick={onClickAsync}>Async</button>
         <button onClick={onClickReset}>Reset</button>
-      </div>
+      </React.Fragment>
     )
   }
 }

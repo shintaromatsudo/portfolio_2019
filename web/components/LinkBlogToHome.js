@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import PageLink from './PageLink'
 
-const LinkContact = () => {
+const LinkHome = props => {
   const hover = (pageId, colorId, pageClass, colorClass) => {
     const page = document.getElementById(pageId)
     const color = document.getElementById(colorId)
@@ -14,11 +14,11 @@ const LinkContact = () => {
     page.classList.remove(pageClass)
     color.classList.remove(colorClass)
   }
-  const hoverContact = () => {
-    hover('contact', 'blue', 'hoverContact', 'hoverBlue')
+  const hoverHome = () => {
+    hover('home', 'green', 'hoverHome', 'hoverGreen')
   }
-  const leaveContact = () => {
-    leave('contact', 'blue', 'hoverContact', 'hoverBlue')
+  const leaveHome = () => {
+    leave('home', 'green', 'hoverHome', 'hoverGreen')
   }
 
   const click = (colorId, colorClass, pathname) => {
@@ -28,95 +28,97 @@ const LinkContact = () => {
       Router.push({ pathname: pathname })
     }, 500)
   }
-  const clickContact = () => {
-    click('blue', 'clickBlue', '/contact')
+  const clickHome = () => {
+    click('green', 'clickGreen', '/home')
   }
 
   return (
     <React.Fragment>
       <div
-        onClick={clickContact}
-        onMouseEnter={hoverContact}
-        onMouseLeave={leaveContact}
+        onClick={clickHome}
+        onMouseEnter={hoverHome}
+        onMouseLeave={leaveHome}
       >
-        <div id="blue" className="blue" />
-        <div id="contact">
-          <PageLink name="Contact" />
+        <div id="green" className="green" />
+        <div id="home" style={props.homeStyle}>
+          <PageLink name="Home" />
         </div>
       </div>
       <style jsx>{`
-        #contact {
+        #home {
           position: fixed;
-          left: 45%;
-          bottom: -70px;
+          left: -50px;
+          top: 45%;
+          transform: rotate(90deg);
         }
-        .hoverContact {
-          animation: bounceContact 0.5s linear 0s;
+        .hoverHome {
+          animation: bounceHome 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
-        .blue {
+        .green {
           position: fixed;
-          top: 100%;
+          top: 0;
+          right: 100%;
           width: 100vw;
           height: 100vh;
           z-index: 100;
           cursor: pointer;
-          background-color: #2ca9e1;
+          background-color: #00a968;
         }
-        .hoverBlue {
-          animation: bounceBlue 0.5s linear 0s;
+        .hoverGreen {
+          animation: bounceGreen 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
-        .clickBlue {
-          animation: fillBlue 0.5s linear 0s;
+        .clickGreen {
+          animation: fillGreen 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
-        @keyframes bounceContact {
+        @keyframes bounceHome {
           0% {
-            transform: translateaY(-0%);
+            transform: translateaX(0%) rotate(90deg);
           }
           5% {
-            transform: translateY(-22%);
+            transform: translateX(50%) rotate(90deg);
           }
           30% {
-            transform: translateY(-8%);
+            transform: translateX(30%) rotate(90deg);
           }
           50% {
-            transform: translateY(-17%);
+            transform: translateX(45%) rotate(90deg);
           }
           75% {
-            transform: translateY(-13%);
+            transform: translateX(35%) rotate(90deg);
           }
           100% {
-            transform: translateY(-15%);
+            transform: translateX(40%) rotate(90deg);
           }
         }
-        @keyframes bounceBlue {
+        @keyframes bounceGreen {
           0% {
-            top: 100%;
+            right: 100%;
           }
           5% {
-            top: 95%;
+            right: 95%;
           }
           30% {
-            top: 97%;
+            right: 97%;
           }
           50% {
-            top: 95.5%;
+            right: 95.5%;
           }
           75% {
-            top: 96.5%;
+            right: 96.5%;
           }
           100% {
-            top: 96%;
+            right: 96%;
           }
         }
-        @keyframes fillBlue {
+        @keyframes fillGreen {
           0% {
-            top: 96%;
+            right: 96%;
           }
           100% {
-            top: 0%;
+            right: 0%;
           }
         }
       `}</style>
@@ -124,4 +126,4 @@ const LinkContact = () => {
   )
 }
 
-export default LinkContact
+export default LinkHome
