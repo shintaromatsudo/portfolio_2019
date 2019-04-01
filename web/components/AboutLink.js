@@ -43,7 +43,7 @@ const AboutLink = props => {
         #aboutLink :hover {
           color: white;
           background-color: black;
-          border: 2px solid white;
+          border: 4px solid white;
         }
         a {
           color: black;

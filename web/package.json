@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "3d-react-carousal": "^2.0.1",
     "@material-ui/core": "^3.9.2",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
