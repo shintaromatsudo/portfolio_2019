@@ -11,13 +11,14 @@ class HelloWorld extends React.Component {
     }
   }
 
-  hw() {
+  async hw() {
     const text = new Array('Hello World', 'こんにちは')
     const h1 = document.getElementById('h1')
     console.log(text)
     for (let i = 0; i < text.length; i++) {
       console.log(text[i])
       h1.innerHTML = text[i]
+      await new Promise(r => setTimeout(r,2000))
     }
   }
 
