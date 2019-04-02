@@ -5,28 +5,56 @@ class HelloWorld extends React.Component {
     this.hw()
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.location !== this.props.location) {
-      this.hw()
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.location !== this.props.location) {
+  //     this.hw()
+  //   }
+  // }
+
+  // componentWillUnmount() {}
+
+  async hw() {
+    const text = new Array(
+      'Hello World',
+      '世界のみなさん こんにちは',
+      'Bonjour le monde',
+      'Hallo Welt',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      'مرحبا بالعالم',
+      'नमस्ते दुनिया'
+    )
+    const h1 = document.getElementById('h1')
+    const randoms = []
+    for (let i = 0; randoms.length < text.length; i++) {
+      const random = Math.floor(Math.random() * text.length)
+      if (!randoms.includes(random)) {
+        console.log(random)
+        console.log(text[random])
+        randoms.push(random)
+        h1.innerHTML = text[random]
+        await this.sleep(5000)
+      }
     }
   }
 
-  async hw() {
-    const text = new Array('Hello World', 'こんにちは')
-    const h1 = document.getElementById('h1')
-    console.log(text)
-    for (let i = 0; i < text.length; i++) {
-      console.log(text[i])
-      h1.innerHTML = text[i]
-      await new Promise(r => setTimeout(r,2000))
-    }
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
   }
 
   render() {
     return (
       <React.Fragment>
         <div className="helloWorld">
-          <h1 id="h1">Hello World</h1>
+          <h1 id="h1" />
         </div>
         <style jsx>{`
           .helloWorld {
