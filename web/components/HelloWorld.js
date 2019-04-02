@@ -16,19 +16,19 @@ class HelloWorld extends React.Component {
   async hw() {
     const text = new Array(
       'Hello World',
-      '世界のみなさん こんにちは',
+      'こんにちは 世界',
       'Bonjour le monde',
       'Hallo Welt',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
+      // '',
+      // '',
+      // '',
+      // '',
+      // '',
+      // '',
+      // '',
+      // '',
+      // '',
+      // '',
       'مرحبا بالعالم',
       'नमस्ते दुनिया'
     )
@@ -40,10 +40,12 @@ class HelloWorld extends React.Component {
         console.log(random)
         console.log(text[random])
         randoms.push(random)
+        h1.classList.add('fadeInOut')
         h1.innerHTML = text[random]
         await this.sleep(5000)
       }
     }
+    h1.classList.remove('fadeInOut')
   }
 
   sleep(ms) {
@@ -64,7 +66,23 @@ class HelloWorld extends React.Component {
             justify-content: center;
             align-items: center;
           }
-          h1 {
+          .fadeInOut {
+            animation: fadeInOut 5s;
+            animation-iteration-count: infinite;
+          }
+          @keyframes fadeInOut {
+            0% {
+              opacity: 0;
+            }
+            25% {
+              opacity: 1;
+            }
+            75% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
           }
         `}</style>
       </React.Fragment>
