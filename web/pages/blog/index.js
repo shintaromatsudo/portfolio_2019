@@ -16,7 +16,7 @@ const Blog = () => (
       <Blogs />
     </div>
     <LinkHome />
-    <LinkContact />
+    <LinkContact url={'blog'} />
     <style jsx>{`
       .Blog {
         margin: 50px;

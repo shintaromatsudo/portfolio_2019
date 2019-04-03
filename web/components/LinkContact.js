@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import PageLink from './PageLink'
 
-const LinkContact = () => {
+const LinkContact = props => {
   const hover = (pageId, colorId, pageClass, colorClass) => {
     const page = document.getElementById(pageId)
     const color = document.getElementById(colorId)
@@ -24,6 +24,8 @@ const LinkContact = () => {
   const click = (colorId, colorClass, pathname) => {
     const elm = document.getElementById(colorId)
     elm.classList.add(colorClass)
+    const url = props.url
+    sessionStorage.setItem('url', url)
     setTimeout(function() {
       Router.push({ pathname: pathname })
     }, 500)

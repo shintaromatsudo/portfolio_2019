@@ -16,7 +16,7 @@ const About = () => (
     <AboutLink id={'works'} href={'/about/works'} name={'WORKS'} />
     <AboutLink id={'gallery'} href={'/about/gallery'} name={'GALLERY'} />
     <LinkHome />
-    <LinkContact />
+    <LinkContact url={'about'} />
     <style jsx>{``}</style>
   </React.Fragment>
 )

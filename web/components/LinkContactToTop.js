@@ -14,6 +14,7 @@ const LinkHome = props => {
     page.classList.remove(pageClass)
     color.classList.remove(colorClass)
   }
+
   const hoverHome = () => {
     hover('home', 'green', 'hoverHome', 'hoverGreen')
   }

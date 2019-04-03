@@ -50,16 +50,16 @@ class HelloWorld extends React.Component {
         randoms.push(random)
         h1.classList.add('fadeInOut')
         const h = Math.random() * 360
-        h1.style.color = `hsl(${h}, 80%, 60%)`
+        h1.style.color = `hsl(${h}, 100%, 50%)`
         h1.innerHTML = text[random]
-        await this.sleep(5000)
+        await this.sleep(10)
       }
     }
     h1.classList.remove('fadeInOut')
   }
 
   sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
+    return new Promise(resolve => setTimeout(resolve, ms * 1000))
   }
 
   render() {
@@ -77,21 +77,21 @@ class HelloWorld extends React.Component {
             align-items: center;
           }
           h1 {
-            font-size: 8vw;
-            text-shadow: 5px 5px 1px #999999, -5px -5px 1px #999999;
+            font-size: 7vw;
+            text-shadow: 10px 10px 1px #dddddd;
           }
           .fadeInOut {
-            animation: fadeInOut 5s;
+            animation: fadeInOut 10s;
             animation-iteration-count: infinite;
           }
           @keyframes fadeInOut {
             0% {
               opacity: 0;
             }
-            25% {
+            15% {
               opacity: 1;
             }
-            75% {
+            85% {
               opacity: 1;
             }
             100% {

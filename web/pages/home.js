@@ -10,7 +10,7 @@ const style = {
 const Home = () => (
   <React.Fragment>
     <FadeOutColor style={style} />
-    <PageLinks />
+    <PageLinks url={'home'} />
     <HelloWorld />
   </React.Fragment>
 )

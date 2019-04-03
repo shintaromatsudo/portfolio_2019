@@ -2,7 +2,7 @@ import Router from 'next/router'
 import PageLink from './PageLink'
 import LinkContact from './LinkContact'
 
-const PageLinks = () => {
+const PageLinks = props => {
   const hover = (pageId, colorId, pageClass, colorClass) => {
     const page = document.getElementById(pageId)
     const color = document.getElementById(colorId)
@@ -67,7 +67,7 @@ const PageLinks = () => {
           <PageLink name="Blog" />
         </div>
       </div>
-      <LinkContact />
+      <LinkContact url={props.url} />
       <style jsx>{`
         #about {
           position: fixed;
