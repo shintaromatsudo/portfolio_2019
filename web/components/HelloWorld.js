@@ -19,18 +19,26 @@ class HelloWorld extends React.Component {
       'こんにちは 世界',
       'Bonjour le monde',
       'Hallo Welt',
-      // '',
-      // '',
-      // '',
-      // '',
-      // '',
-      // '',
-      // '',
-      // '',
-      // '',
-      // '',
+      'Hola Mundo',
+      'Olá Mundo',
+      'Hallo Wereld',
+      'Ahoj světe',
+      'Привет мир',
+      'Dia duit an Domhain',
+      'Γειά σου Κόσμε',
+      'Saluton Mondo',
+      'שלום עולם',
       'مرحبا بالعالم',
-      'नमस्ते दुनिया'
+      'Selam Dünya',
+      'Salamu, Dunia',
+      'Hello Wêreld',
+      'नमस्ते दुनिया',
+      // 'Chào thế giới',
+      'สวัสดีชาวโลก',
+      'Hai dunia',
+      'Salom Dunyo',
+      '안녕하세요',
+      '你好 世界'
     )
     const h1 = document.getElementById('h1')
     const randoms = []
@@ -41,6 +49,8 @@ class HelloWorld extends React.Component {
         console.log(text[random])
         randoms.push(random)
         h1.classList.add('fadeInOut')
+        const h = Math.random() * 360
+        h1.style.color = `hsl(${h}, 80%, 60%)`
         h1.innerHTML = text[random]
         await this.sleep(5000)
       }
@@ -65,6 +75,10 @@ class HelloWorld extends React.Component {
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+          h1 {
+            font-size: 8vw;
+            text-shadow: 5px 5px 1px #999999, -5px -5px 1px #999999;
           }
           .fadeInOut {
             animation: fadeInOut 5s;
