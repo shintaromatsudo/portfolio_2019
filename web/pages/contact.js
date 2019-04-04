@@ -6,8 +6,7 @@ const style = {
 }
 
 const Contact = () => {
-  var url = sessionStorage.getItem('url')
-  console.log(url)
+  const url = sessionStorage.getItem('url')
   return (
     <React.Fragment>
       <FadeOutColor style={style} />

@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import PageLink from './PageLink'
 
-const LinkHome = props => {
+const LinkTop = props => {
   const hover = (pageId, colorId, pageClass, colorClass) => {
     const page = document.getElementById(pageId)
     const color = document.getElementById(colorId)
@@ -14,14 +14,6 @@ const LinkHome = props => {
     page.classList.remove(pageClass)
     color.classList.remove(colorClass)
   }
-
-  const hoverHome = () => {
-    hover('home', 'green', 'hoverHome', 'hoverGreen')
-  }
-  const leaveHome = () => {
-    leave('home', 'green', 'hoverHome', 'hoverGreen')
-  }
-
   const click = (colorId, colorClass, pathname) => {
     const elm = document.getElementById(colorId)
     elm.classList.add(colorClass)
@@ -29,50 +21,70 @@ const LinkHome = props => {
       Router.push({ pathname: pathname })
     }, 500)
   }
-  const clickHome = () => {
-    click('green', 'clickGreen', '/home')
+  const url = props.url
+
+  const hoverTop = () => {
+    hover('top', 'color', 'hoverTop', 'hoverColor')
+  }
+  const leaveTop = () => {
+    leave('top', 'color', 'hoverTop', 'hoverColor')
+  }
+  const clickTop = () => {
+    click('color', 'clickColor', '/' + url)
+  }
+
+  let backgroundColor
+  switch (url) {
+    case 'home':
+      backgroundColor = '#00a968'
+      break
+    case 'about':
+      backgroundColor = '#e95295'
+      break
+    case 'blog':
+      backgroundColor = '#f08300'
+      break
   }
 
   return (
     <React.Fragment>
-      <div
-        onClick={clickHome}
-        onMouseEnter={hoverHome}
-        onMouseLeave={leaveHome}
-      >
-        <div id="green" className="green" />
-        <div id="home" style={props.homeStyle}>
-          <PageLink name="Home" />
+      <div onClick={clickTop} onMouseEnter={hoverTop} onMouseLeave={leaveTop}>
+        <div
+          id="color"
+          className="color"
+          style={{ backgroundColor: backgroundColor }}
+        />
+        <div id="top">
+          <PageLink name={props.url.toUpperCase()} />
         </div>
       </div>
       <style jsx>{`
-        #home {
+        #top {
           position: fixed;
           top: -70px;
           left: 45%;
         }
-        .hoverHome {
-          animation: bounceHome 0.5s linear 0s;
+        .hoverTop {
+          animation: bounceTop 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
-        .green {
+        .color {
           position: fixed;
           bottom: 100%;
           width: 100vw;
           height: 100vh;
           z-index: 100;
           cursor: pointer;
-          background-color: #00a968;
         }
-        .hoverGreen {
-          animation: bounceGreen 0.5s linear 0s;
+        .hoverColor {
+          animation: bounceColor 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
-        .clickGreen {
-          animation: fillGreen 0.5s linear 0s;
+        .clickColor {
+          animation: fillColor 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
-        @keyframes bounceHome {
+        @keyframes bounceTop {
           0% {
             transform: translateaY(0%);
           }
@@ -92,7 +104,7 @@ const LinkHome = props => {
             transform: translateY(15%);
           }
         }
-        @keyframes bounceGreen {
+        @keyframes bounceColor {
           0% {
             bottom: 100%;
           }
@@ -112,7 +124,7 @@ const LinkHome = props => {
             bottom: 96%;
           }
         }
-        @keyframes fillGreen {
+        @keyframes fillColor {
           0% {
             bottom: 96%;
           }
@@ -125,4 +137,4 @@ const LinkHome = props => {
   )
 }
 
-export default LinkHome
+export default LinkTop
