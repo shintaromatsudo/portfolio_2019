@@ -2,5 +2,5 @@
   "version": 2,
   "name": "ShindtaroMatsudo",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
-  "alias": "ShintaroMatsudo.now.sh"
+  "alias": "shintaromatsudo.now.sh"
 }
