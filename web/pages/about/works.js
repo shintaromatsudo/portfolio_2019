@@ -1,11 +1,11 @@
 import WorkList from '../../components/WorkList'
 
 const Works = () => (
-  <div className="Works">
+  <div className="works">
     <h1>Works</h1>
     <WorkList />
     <style jsx>{`
-      .Works {
+      .works {
         margin: 70px;
       }
       h1 {
