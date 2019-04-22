@@ -15,7 +15,6 @@ class HelloWorld extends React.Component {
 
   async hw() {
     const text = new Array(
-      'Hello World',
       'こんにちは 世界',
       'Bonjour le monde',
       'Hallo Welt',
@@ -65,20 +64,23 @@ class HelloWorld extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="helloWorld">
-          <h1 id="h1" />
+        <div id="helloWorld">
+          <h1 id="h1">Hello World</h1>
         </div>
         <style jsx>{`
-          .helloWorld {
+          #helloWorld {
             width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-image: url('../static/img/TheWave.jpg');
+            background-size: cover;
+            background-position: center;
           }
           h1 {
             font-size: 7vw;
-            text-shadow: 10px 10px 1px #dddddd;
+            text-shadow: 7px 7px 1px #dddddd;
           }
           .fadeInOut {
             animation: fadeInOut 10s;
