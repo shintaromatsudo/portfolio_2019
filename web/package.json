@@ -17,6 +17,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "cookie-parser": "^1.4.4",
+    "d3": "^5.9.2",
     "express": "^4.16.4",
     "next": "^8.0.3",
     "next-redux-saga": "^4.0.1",

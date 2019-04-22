@@ -1,22 +1,34 @@
 const Greeting = () => (
   <div className="greeting">
     <h2>Greeting</h2>
-    <p>‚±‚ñ‚É‚¿‚ÍA¼“y@T‘¾˜Y‚Å‚·B</p>
-    <p>Ž©‘R‚ðˆ¤‚µA¬Š}Œ´”“‡•ê“‡‚Æ”ªdŽR”“‡”gÆŠÔ“‡‚ÉZ‚ñ‚Å‚¢‚Ü‚µ‚½B</p>
-    <p>Œ»Ý‚ÍA‰¡•l‚ÅŽqˆç‚Ä•±“¬’†‚Å‚·B</p>
-    <p>Žï–¡‚Í‚à‚Ì‚Ã‚­‚è‚Æ—·‚ÆƒTƒbƒJ[‚Å‚·B</p>
+    <p>ï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ÍAï¿½ï¿½ï¿½yï¿½@ï¿½Tï¿½ï¿½ï¿½Yï¿½Å‚ï¿½ï¿½B</p>
+    <p>ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê“‡ï¿½Æ”ï¿½ï¿½dï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ÆŠÔ“ï¿½ï¿½ÉZï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B</p>
+    <p>ï¿½ï¿½ï¿½Ý‚ÍAï¿½ï¿½ï¿½lï¿½ÅŽqï¿½ï¿½Ä•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å‚ï¿½ï¿½B</p>
+    <p>ï¿½ï–¡ï¿½Í‚ï¿½ï¿½Ì‚Ã‚ï¿½ï¿½ï¿½Æ—ï¿½ï¿½ÆƒTï¿½bï¿½Jï¿½[ï¿½Å‚ï¿½ï¿½B</p>
 
-    <p>2018”N‚©‚çƒGƒ“ƒWƒjƒA‚Æ‚µ‚Ä“­‚©‚¹‚Ä‚¢‚½‚¾‚¢‚Ä‚¨‚è‚Ü‚·B</p>
-    <p>Ú×‚ÌŒo—ð‚ÍˆÈ‰º‚Ì’Ê‚è‚Å‚·B</p>
-    <p>@2018”N 1ŒŽ`2018”N 7ŒŽ@@WEBƒTƒCƒg§ìiHTML5, CSS3, JavaScriptj</p>
-    <p>@2018”N 8ŒŽ`2018”N11ŒŽ@@‹@ŠBŠwK‚ÌÝŒvEŠJ”­‹y‚Ñƒf[ƒ^ƒrƒWƒ…ƒAƒ‰ƒCƒ[[ƒVƒ‡ƒ“</p>
-    <p>@@@@@@@@@@@@@@@iPython, React.js, D3.js, PostgreSQLj</p>
-    <p>@2018”N12ŒŽ`2019”N 3ŒŽ@@ƒJƒXƒ^ƒ}[ƒT[ƒrƒX‚Ì‚½‚ß‚ÌSaaSŠJ”­</p>
-    <p>@@@@@@@@@@@@@@@iReact.js, Redux, Node.js(Express), MySQLj</p>
-    <p>@2018”N12ŒŽ`@Œ»@Ý@@@Š¯Œö’¡‚ªŽg—p‚·‚é‘å‹K–ÍwebƒAƒvƒŠƒP[ƒVƒ‡ƒ“ŠJ”­
-    <p>@@@@@@@@@@@@@@@iHTML, CSS, JavaScript, Java(Spring), PostgreSQLj</p>
+    <p>2018ï¿½Nï¿½ï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Wï¿½jï¿½Aï¿½Æ‚ï¿½ï¿½Ä“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B</p>
+    <p>ï¿½Ú×‚ÌŒoï¿½ï¿½ï¿½ÍˆÈ‰ï¿½ï¿½Ì’Ê‚ï¿½Å‚ï¿½ï¿½B</p>
+    <p>ï¿½@2018ï¿½N 1ï¿½ï¿½ï¿½`2018ï¿½N 7ï¿½ï¿½ï¿½@ï¿½@WEBï¿½Tï¿½Cï¿½gï¿½ï¿½ï¿½ï¿½iHTML5, CSS3, JavaScriptï¿½j</p>
+    <p>
+      ï¿½@2018ï¿½N
+      8ï¿½ï¿½ï¿½`2018ï¿½N11ï¿½ï¿½ï¿½@ï¿½@ï¿½@ï¿½Bï¿½wï¿½Kï¿½ÌÝŒvï¿½Eï¿½Jï¿½ï¿½ï¿½yï¿½Ñƒfï¿½[ï¿½^ï¿½rï¿½Wï¿½ï¿½ï¿½Aï¿½ï¿½ï¿½Cï¿½[ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½
+    </p>
+    <p>ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½iPython, React.js, D3.js, PostgreSQLï¿½j</p>
+    <p>ï¿½@2018ï¿½N12ï¿½ï¿½ï¿½`2019ï¿½N 3ï¿½ï¿½ï¿½@ï¿½@ï¿½Jï¿½Xï¿½^ï¿½}ï¿½[ï¿½Tï¿½[ï¿½rï¿½Xï¿½Ì‚ï¿½ï¿½ß‚ï¿½SaaSï¿½Jï¿½ï¿½</p>
+    <p>
+      ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½iReact.js, Redux, Node.js(Express), MySQLï¿½j
+    </p>
+    <p>
+      ï¿½@2018ï¿½N12ï¿½ï¿½ï¿½`ï¿½@ï¿½ï¿½ï¿½@ï¿½Ý@ï¿½@ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½ï¿½ï¿½Kï¿½ï¿½webï¿½Aï¿½vï¿½ï¿½ï¿½Pï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Jï¿½ï¿½ã€
+    </p>
+    <p>
+      ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½@ï¿½iHTML, CSS, JavaScript, Java(Spring),
+      PostgreSQLï¿½j
+    </p>
 
-    <p>‚»‚Ì‚Ù‚©AWebƒfƒUƒCƒ“iFigmajA‰æ‘œ•ÒWiIllustratorEPhotoshopjA“®‰æ§ìiFinalCutj‚ÌŒoŒ±‚ª‚ ‚è‚Ü‚·B</p>
+    <p>
+      ï¿½ï¿½ï¿½Ì‚Ù‚ï¿½ï¿½AWebï¿½fï¿½Uï¿½Cï¿½ï¿½ï¿½iFigmaï¿½jï¿½Aï¿½æ‘œï¿½ÒWï¿½iIllustratorï¿½EPhotoshopï¿½jï¿½Aï¿½ï¿½ï¿½æ§ï¿½ï¿½iFinalCutï¿½jï¿½ÌŒoï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½B
+    </p>
     <style jsx>{`
       .greeting {
         margin: 70px;

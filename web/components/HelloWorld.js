@@ -41,6 +41,7 @@ class HelloWorld extends React.Component {
     )
     const h1 = document.getElementById('h1')
     const randoms = []
+    await this.sleep(10)
     for (let i = 0; randoms.length < text.length; i++) {
       const random = Math.floor(Math.random() * text.length)
       if (!randoms.includes(random)) {
