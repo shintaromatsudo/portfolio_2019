@@ -9,7 +9,7 @@ const slides = [
 ]
 
 const Gallery = () => (
-  <div className="Gallery">
+  <div className="gallery">
     <h1>Gallery</h1>
     <Carousel slides={slides} />
     <style jsx>{`
