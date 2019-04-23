@@ -1,7 +1,18 @@
 import React from 'react'
+import FadeOutColor from '../components/FadeOutColor'
+import PageLinks from '../components/PageLinks'
+import HelloWorld from '../components/HelloWorld'
 
-export default class Index extends React.Component {
-  render() {
-    return <p>Hello Next.js</p>
-  }
+const style = {
+  backgroundColor: '#00a968'
 }
+
+const Index = () => (
+  <React.Fragment>
+    <FadeOutColor style={style} />
+    <PageLinks url={'home'} />
+    <HelloWorld />
+  </React.Fragment>
+)
+
+export default Index
