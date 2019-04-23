@@ -15,6 +15,7 @@ class HelloWorld extends React.Component {
 
   async hw() {
     const text = new Array(
+      'Hello World',
       'こんにちは 世界',
       'Bonjour le monde',
       'Hallo Welt',
@@ -41,7 +42,6 @@ class HelloWorld extends React.Component {
     )
     const h1 = document.getElementById('h1')
     const randoms = []
-    await this.sleep(10)
     for (let i = 0; randoms.length < text.length; i++) {
       const random = Math.floor(Math.random() * text.length)
       if (!randoms.includes(random)) {
@@ -66,7 +66,7 @@ class HelloWorld extends React.Component {
     return (
       <React.Fragment>
         <div id="helloWorld">
-          <h1 id="h1">Hello World</h1>
+          <h1 id="h1" />
         </div>
         <style jsx>{`
           #helloWorld {

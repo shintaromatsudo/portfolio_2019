@@ -22,6 +22,10 @@ class MyDocument extends Document {
               font-family: Impact;
               margin:0;
             }
+            h2 {
+              margin: 70px;
+              text-align: center;
+            }
           `}</style>
         </Head>
         <body>

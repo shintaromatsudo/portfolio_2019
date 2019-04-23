@@ -17,7 +17,7 @@ class BarChart extends Component {
   createBarChart() {
     const node = this.node
     const W = 700,
-      H = 700,
+      H = 600,
       BAR_W = 40,
       BAR_PADDING = 50,
       W_PADDING = 25,

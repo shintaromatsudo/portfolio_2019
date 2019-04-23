@@ -1,15 +1,24 @@
 import React from 'react'
 
 class FadeOutColor extends React.Component {
-  componentDidMount(){
-    const fadeOutColor = document.getElementById(fadeOutColor)
-    fadeOutColor.classList.add(fadeOutColor)
+  constructor(props) {
+    super(props)
+    this.addClass = this.addClass.bind(this)
   }
-   
+
+  componentDidMount() {
+    this.addClass()
+  }
+
+  addClass() {
+    const fadeOutColor = document.getElementById('fadeOutColor')
+    fadeOutColor.classList.add('fadeOutColor')
+  }
+
   render() {
     return (
       <div>
-        <div id="fadeOutColor" className="color" style={props.style} />
+        <div id="fadeOutColor" className="color" style={this.props.style} />
         <style jsx>{`
           .color {
             position: absolute;
@@ -19,11 +28,9 @@ class FadeOutColor extends React.Component {
             height: 100vh;
             z-index: 100;
             visibility: visible;
-            animation: fadeOut 0.3s linear 0s;
-            animation-fill-mode: forwards;
           }
           .fadeOutColor {
-             animation: fadeOut 0.3s linear 0s;
+            animation: fadeOut 0.5s linear 0s;
             animation-fill-mode: forwards;
           }
           @keyframes fadeOut {

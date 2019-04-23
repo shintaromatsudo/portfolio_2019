@@ -7,7 +7,7 @@ const style = {
   backgroundColor: '#00a968'
 }
 
-const Index = () => (
+const Home = () => (
   <React.Fragment>
     <FadeOutColor style={style} />
     <PageLinks url={'home'} />
@@ -15,4 +15,4 @@ const Index = () => (
   </React.Fragment>
 )
 
-export default Index
+export default Home
