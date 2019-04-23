@@ -1,34 +1,24 @@
 const Greeting = () => (
   <div className="greeting">
     <h2>Greeting</h2>
-    <p>����ɂ��́A���y�@�T���Y�ł��B</p>
-    <p>���R�������A���}�������꓇�Ɣ��d�R�����g�Ɗԓ��ɏZ��ł��܂����B</p>
-    <p>���݂́A���l�Ŏq��ĕ������ł��B</p>
-    <p>��͂��̂Â���Ɨ��ƃT�b�J�[�ł��B</p>
+    <p>こんにちは、松土　慎太郎です。</p>
+    <p>自然と旅を愛する元公務員エンジニアです。</p>
+    <p>小笠原諸島母島と八重山諸島波照間島に住んでいたことがあります。</p>
+    
+    <p>現在は横浜で子育てに奮闘中です。</p>
+    <p>趣味はDIYとサッカーです。</p>
+    <p>また、今年はマラソンとサーフィンにも挑戦中です。</p>
 
-    <p>2018�N����G���W�j�A�Ƃ��ē������Ă��������Ă���܂��B</p>
-    <p>�ڍׂ̌o���͈ȉ��̒ʂ�ł��B</p>
-    <p>�@2018�N 1���`2018�N 7���@�@WEB�T�C�g����iHTML5, CSS3, JavaScript�j</p>
-    <p>
-      �@2018�N
-      8���`2018�N11���@�@�@�B�w�K�̐݌v�E�J���y�уf�[�^�r�W���A���C�[�[�V����
-    </p>
-    <p>�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�iPython, React.js, D3.js, PostgreSQL�j</p>
-    <p>�@2018�N12���`2019�N 3���@�@�J�X�^�}�[�T�[�r�X�̂��߂�SaaS�J��</p>
-    <p>
-      �@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�iReact.js, Redux, Node.js(Express), MySQL�j
-    </p>
-    <p>
-      �@2018�N12���`�@���@�݁@�@�@���������g�p�����K��web�A�v���P�[�V�����J��、
-    </p>
-    <p>
-      �@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�iHTML, CSS, JavaScript, Java(Spring),
-      PostgreSQL�j
-    </p>
+    <p>エンジニアとしての経歴は以下の通りです。</p>
+    <p>　2018年 1月～2018年 8月　WEBサイト制作(HTML, CSS, JavaScript(含ｊQuery))</p>
+    <p>　2018年 9月～2018年11月　機械学習を用いたデータ分析・可視化の設計・開発</p>
+    <p>　　　　　　　　　　　　　　(Python, React.js, D3.js, postgreSQL)</p>
+    <p>　2018年12月～2019年 3月　カスタマーサービスのためのSaaS開発</p>
+    <p>　　　　　　　　　　　　　　(React.js, Next.js, Redux, Node.js(Express), MySQL)</p>
+    <p>　2019年12月～　現　在　　官公庁が使用する大規模WEBアプリケーション開発</p>
+    <p>　　　　　　　　　　　　　　(HTML, CSS, JavaScript, Java(Spring), postgreSQL)</p>
 
-    <p>
-      ���̂ق��AWeb�f�U�C���iFigma�j�A�摜�ҏW�iIllustrator�EPhotoshop�j�A���搧��iFinalCut�j�̌o��������܂��B
-    </p>
+    <p>WEBデザイン、画像編集、動画制作</p>
     <style jsx>{`
       .greeting {
         margin: 70px;
