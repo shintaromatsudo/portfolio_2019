@@ -1,5 +1,6 @@
 import LinkTop from '../components/LinkContactToTop'
 import FadeOutColor from '../components/FadeOutColor'
+import Form from '../components/FormGetInTouch'
 
 const style = {
   backgroundColor: '#2ca9e1'
@@ -12,6 +13,7 @@ const Contact = () => {
       <FadeOutColor style={style} />
       <div className="contact">
         <h1>Get In Touch</h1>
+        <Form />
         <p>
           <a href="tel:080-5464-0880">電話</a>
         </p>
