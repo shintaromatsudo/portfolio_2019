@@ -13,7 +13,7 @@ const Confirm = props => {
     //   url: '/api/contact',
     //   params: data
     // })
-    window.open('/complete');
+    window.open('/complete')
     Router.push(`/`)
   }
   return (
@@ -38,6 +38,7 @@ const Confirm = props => {
           width: 100vw;
           height: 100vh;
           background-color: #00afcc;
+          z-index: 9999;
         }
       `}</style>
     </div>

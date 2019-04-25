@@ -48,7 +48,7 @@ const LinkContact = props => {
       </div>
       <style jsx>{`
         #contact {
-          position: absolute;
+          position: fixed;
           left: 45%;
           bottom: -70px;
         }
