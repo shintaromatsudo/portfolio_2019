@@ -9,12 +9,12 @@ const style = {
 const Contact = () => {
   const url = sessionStorage.getItem('url')
   return (
-    <React.Fragment>
+    <div id="contact">
       <FadeOutColor style={style} />
       <div className="contact">
-        <h1>Get In Touch</h1>
+        <h2 className="getInTouch">Get In Touch</h2>
         <Form />
-        <p>
+        {/* <p>
           <a href="tel:080-5464-0880">電話</a>
         </p>
         <p>
@@ -23,35 +23,20 @@ const Contact = () => {
         <div className="line">line</div>
         <p className="github">github</p>
         <p className="facebook">facebook</p>
-        <p className="instagram">Instagram</p>
+        <p className="instagram">Instagram</p> */}
       </div>
       <LinkTop url={url} />
       <style jsx>{`
-        h1 {
-          margin: 70px;
-          text-align: center;
-        }
-        .blue {
-          position: fixed;
-          top: 100%;
+        #contact {
           width: 100vw;
           height: 100vh;
-          z-index: 100;
-          cursor: pointer;
-          background-color: #2ca9e1;
-          visibility: visible;
-          animation: fadeBlue 0.3s linear 0s;
-          animation-fill-mode: forwards;
         }
-        @keyframes fadeBlue {
-          0% {
-            opacity: 1;
-            visibility: visible;
-          }
-          100% {
-            opacity: 0;
-            visibility: hidden;
-          }
+        .contact {
+          padding-top: 120px;
+        }
+        .getInTouch {
+          font-size: 50px;
+          margin: 0;
         }
         .line {
           width: 30px;
@@ -68,7 +53,7 @@ const Contact = () => {
           color: #55acee;
         }
       `}</style>
-    </React.Fragment>
+    </div>
   )
 }
 

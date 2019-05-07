@@ -1,4 +1,5 @@
 import Confirm from './Confirm'
+import ContactButton from './ContactButton'
 
 class Form extends React.Component {
   constructor(props) {
@@ -37,12 +38,13 @@ class Form extends React.Component {
     const { name, email, title, message } = this.state
     return (
       <div id="form">
-        <p>お気軽にお問い合わせください。心よりお待ちしております。</p>
         <form
+          className="form"
           onSubmit={e => {
             this.handleConfirm(e)
           }}
         >
+          {/* <p>お気軽にお問い合わせください。心よりお待ちしております。</p> */}
           <div className="form">
             <label>
               <input
@@ -89,44 +91,27 @@ class Form extends React.Component {
             </label>
           </div>
           <div>
-            <button type="submit">送信内容を確認する</button>
+            <ContactButton type="submit" value="送信内容を確認する" />
           </div>
         </form>
+        {/* <p>よくあるお問い合わせ</p> */}
         <div id="confirm" className="confirm">
           <Confirm state={this.state} />
         </div>
         <style jsx>{`
           #form {
+          }
+          .form {
             text-align: center;
-            background-color: #00afcc;
-          }
-          h2 {
-            color: #9b72b0;
-          }
-          p {
-            color: #9b72b0;
           }
           input {
             font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体,
               Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN,
               Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック,
               MSPGothic, sans-serif;
-            background-color: #82cddd;
-            border: solid 2px #9b72b0;
+            // background-color: #82cddd;
+            border: solid 2px black;
             width: 300px;
-            height: 20px;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-          }
-          select {
-            font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体,
-              Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN,
-              Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック,
-              MSPGothic, sans-serif;
-            background-color: #82cddd;
-            border: solid 2px #9b72b0;
-            width: 320px;
             height: 20px;
             margin: 10px;
             padding: 10px;
@@ -137,8 +122,8 @@ class Form extends React.Component {
               Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN,
               Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック,
               MSPGothic, sans-serif;
-            background-color: #82cddd;
-            border: solid 2px #9b72b0;
+            // background-color: #82cddd;
+            border: solid 2px black;
             width: 300px;
             height: 100px;
             margin: 10px;
@@ -147,38 +132,21 @@ class Form extends React.Component {
           }
           /* Google Chrome, Safari, Opera 15+, Android, iOS */
           ::-webkit-input-placeholder {
-            color: #9b72b0;
+            // color: #9b72b0;
           }
           /* Firefox 18- */
           :-moz-placeholder {
-            color: #9b72b0;
+            // color: #9b72b0;
             opacity: 1;
           }
           /* Firefox 19+ */
           ::-moz-placeholder {
-            color: #9b72b0;
+            // color: #9b72b0;
             opacity: 1;
           }
           /* IE 10+ */
           :-ms-input-placeholder {
-            color: #9b72b0;
-          }
-          button {
-            width: 320px;
-            height: 40px;
-            margin: 10px;
-            padding: 10px;
-            display: inline-block;
-            text-decoration: none;
-            color: #9b72b0;
-            border: solid 2px #9b72b0;
-            border-radius: 5px;
-            transition: 0.4s;
-          }
-          button :hover {
-            background: #9b72b0;
-            color: white;
-            cursor: pointer;
+            // color: #9b72b0;
           }
           .confirm {
             display: none;

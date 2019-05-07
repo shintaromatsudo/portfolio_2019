@@ -5,10 +5,8 @@ axios.defaults.xsrfHeaderName = 'X-CSRF-Token'
 
 let url
 if (process.env.NODE_ENV === 'production') {
-  console.log(process.env.NODE_ENV)
   url = 'https://shintaromatsudo.herokuapp.com'
 } else {
-  console.log(process.env.NODE_ENV)
   url = 'http://localhost:5000'
 }
 

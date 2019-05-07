@@ -26,14 +26,15 @@ class MyDocument extends Document {
               font-family: Impact;
               margin:0;
             }
-            .greeting p {
+            .greetingContents, .careerContents {
               font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体,
                 Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN,
                 Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック, MSPGothic,
                 sans-serif !important;
             }
             h2 {
-              margin: 70px;
+              font-size: 8vh;
+              margin-top: 70px;
               text-align: center;
             }
           `}</style>

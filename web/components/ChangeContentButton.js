@@ -12,6 +12,7 @@ class ChangeContentButton extends React.Component {
 
   changeContent(content) {
     const contentgr = document.getElementById('ContentGreeting')
+    const contentc = document.getElementById('ContentCareer')
     const contents = document.getElementById('ContentSkills')
     const contentw = document.getElementById('ContentWorks')
     const contentga = document.getElementById('ContentGallery')
@@ -19,24 +20,35 @@ class ChangeContentButton extends React.Component {
       case 'greeting':
         console.log('click')
         contentgr.classList.remove('d-none')
+        contentc.classList.add('d-none')
+        contents.classList.add('d-none')
+        contentw.classList.add('d-none')
+        contentga.classList.add('d-none')
+        break
+      case 'career':
+        contentgr.classList.add('d-none')
+        contentc.classList.remove('d-none')
         contents.classList.add('d-none')
         contentw.classList.add('d-none')
         contentga.classList.add('d-none')
         break
       case 'skills':
         contentgr.classList.add('d-none')
+        contentc.classList.add('d-none')
         contents.classList.remove('d-none')
         contentw.classList.add('d-none')
         contentga.classList.add('d-none')
         break
       case 'works':
         contentgr.classList.add('d-none')
+        contentc.classList.add('d-none')
         contents.classList.add('d-none')
         contentw.classList.remove('d-none')
         contentga.classList.add('d-none')
         break
       case 'gallery':
         contentgr.classList.add('d-none')
+        contentc.classList.add('d-none')
         contents.classList.add('d-none')
         contentw.classList.add('d-none')
         contentga.classList.remove('d-none')
@@ -51,6 +63,12 @@ class ChangeContentButton extends React.Component {
           onClick={() => this.changeContent('greeting')}
         >
           GREETING
+        </p>
+        <p
+          className="contentButton"
+          onClick={() => this.changeContent('career')}
+        >
+          CAREER
         </p>
         <p
           className="contentButton"
@@ -72,9 +90,10 @@ class ChangeContentButton extends React.Component {
         </p>
         <style jsx>{`
           .aboutContents {
-            width: 400px;
-            margin: auto;
-            display: flex;
+            width: 100px;
+            padding: 40px;
+            margin: auto 0;
+            text-align: center;
           }
           .contentButton {
             padding: 10px;
