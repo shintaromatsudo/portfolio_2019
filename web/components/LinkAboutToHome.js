@@ -48,7 +48,7 @@ const LinkHome = props => {
         #home {
           position: fixed;
           right: -50px;
-          top: 45%;
+          top: 35%;
           transform: rotate(-90deg);
         }
         .hoverHome {

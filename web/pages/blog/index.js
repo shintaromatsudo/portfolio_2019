@@ -19,7 +19,12 @@ const Blog = () => (
     <LinkContact url={'blog'} />
     <style jsx>{`
       .Blog {
-        margin: 50px;
+        width: 100vw;
+        height: 100vh;
+        background-color: #f7b977;
+      }
+      h2 {
+        padding: 50px;
       }
     `}</style>
   </React.Fragment>
