@@ -34,7 +34,7 @@ class MyDocument extends Document {
             }
             h2 {
               font-size: 8vh;
-              margin-top: 70px;
+              margin: 0;
               text-align: center;
             }
           `}</style>

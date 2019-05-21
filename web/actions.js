@@ -29,6 +29,8 @@ export const REQUEST_DELETE = 'REQUEST_DELETE'
 export const SUCCEEDED_DELETE = 'SUCCEEDED_DELETE'
 export const FAILED_DELETE = 'FAILED_DELETE'
 
+export const CHANGE_ABOUT_TITLE = 'CHANGE_ABOUT_TITLE'
+
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
@@ -106,3 +108,8 @@ export const failUpdate = message => ({ type: FAILED_UPDATE, message })
 export const deleteData = payload => ({ type: REQUEST_DELETE, payload })
 export const successDelete = payload => ({ type: SUCCEEDED_DELETE, payload })
 export const failDelete = message => ({ type: FAILED_DELETE, message })
+
+export const changeAboutTitle = aboutTitle => ({
+  type: CHANGE_ABOUT_TITLE,
+  aboutTitle
+})

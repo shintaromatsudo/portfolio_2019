@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { changeAboutTitle } from '../actions'
 
 class ChangeContentButton extends React.Component {
   constructor(props) {
@@ -18,7 +20,7 @@ class ChangeContentButton extends React.Component {
     const contentga = document.getElementById('ContentGallery')
     switch (content) {
       case 'greeting':
-        console.log('click')
+        this.props.dispatch(changeAboutTitle('Greeting'))
         contentgr.classList.remove('d-none')
         contentc.classList.add('d-none')
         contents.classList.add('d-none')
@@ -26,6 +28,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'career':
+        this.props.dispatch(changeAboutTitle('Career'))
         contentgr.classList.add('d-none')
         contentc.classList.remove('d-none')
         contents.classList.add('d-none')
@@ -33,6 +36,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'skills':
+        this.props.dispatch(changeAboutTitle('Skills'))
         contentgr.classList.add('d-none')
         contentc.classList.add('d-none')
         contents.classList.remove('d-none')
@@ -40,6 +44,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'works':
+        this.props.dispatch(changeAboutTitle('Works'))
         contentgr.classList.add('d-none')
         contentc.classList.add('d-none')
         contents.classList.add('d-none')
@@ -47,6 +52,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'gallery':
+        this.props.dispatch(changeAboutTitle('Gallery'))
         contentgr.classList.add('d-none')
         contentc.classList.add('d-none')
         contents.classList.add('d-none')
@@ -107,4 +113,4 @@ class ChangeContentButton extends React.Component {
   }
 }
 
-export default ChangeContentButton
+export default connect(state => state)(ChangeContentButton)

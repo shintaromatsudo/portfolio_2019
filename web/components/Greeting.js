@@ -1,7 +1,9 @@
 const Greeting = () => (
-  <div className="greeting">
-    <h2>Greeting</h2>
-    <div className="greetingContents">
+  <div className="greetingContents">
+    <div className="theWave">
+      <img src="../static/img/TheWave2.jpg" alt="TheWave" />
+    </div>
+    <div className="sentence">
       <p>こんにちは、松土　慎太郎です。</p>
       <p>自然と旅をこよなく愛する元公務員エンジニアです。</p>
       <p>小笠原諸島母島と八重山諸島波照間島に住んでいたことがあります。</p>
@@ -12,9 +14,22 @@ const Greeting = () => (
     </div>
     <style jsx>{`
       .greeting {
+        margin: auto;
       }
       .greetingContents {
-        margin: auto 100px;
+        display: flex;
+      }
+      .theWave {
+        width: 300px;
+        margin-left: 100px;
+      }
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .sentence {
+        margin-top: 50px;
+        margin-left: 70px;
       }
     `}</style>
   </div>

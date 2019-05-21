@@ -16,7 +16,6 @@ const data = [
 
 const Skills = () => (
   <div className="skills">
-    <h2>My skill</h2>
     <BarChart data={data} />
     <style jsx>{`
       .skills {
