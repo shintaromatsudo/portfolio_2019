@@ -51,7 +51,7 @@ const About = () => {
           display: flex;
         }
         .contentAbout {
-          width: 1000px;
+          width: 100%;
           margin: auto 0;
         }
         .d-none {

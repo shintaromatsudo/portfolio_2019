@@ -3,15 +3,15 @@ import BarChart from './BarChart'
 const data = [
   ['HTML', 90],
   ['CSS', 90],
-  ['JavaScript(& jQuery)', 90],
-  ['React(& Redux)', 90],
-  ['Node.js(express)', 90],
-  ['Python', 80],
-  ['Java(spring)', 70],
+  ['JavaScript', 85],
+  ['React & Redux', 80],
+  ['Node.js(express)', 70],
+  ['Python', 70],
+  ['Java(spring)', 75],
   ['Video production', 80],
   ['Photograph', 70],
-  ['English', 70],
-  ['Japanese', 100]
+  ['English', 60],
+  ['Japanese', 95]
 ]
 
 const Skills = () => (
@@ -19,6 +19,7 @@ const Skills = () => (
     <BarChart data={data} />
     <style jsx>{`
       .skills {
+        text-align: center;
       }
     `}</style>
   </div>

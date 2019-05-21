@@ -97,8 +97,8 @@ class ChangeContentButton extends React.Component {
         <style jsx>{`
           .aboutContents {
             width: 100px;
-            padding: 40px;
-            margin: auto 0;
+            padding: 40px 0 0 80px;
+            margin: 0;
             text-align: center;
           }
           .contentButton {

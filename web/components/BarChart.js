@@ -17,9 +17,9 @@ class BarChart extends Component {
   createBarChart() {
     const node = this.node
     const W = 700,
-      H = 600,
-      BAR_W = 40,
-      BAR_PADDING = 50,
+      H = 450,
+      BAR_W = 30,
+      BAR_PADDING = 40,
       W_PADDING = 25,
       H_PADDING = 10
 
@@ -44,7 +44,7 @@ class BarChart extends Component {
         return i * BAR_PADDING
       })
       .delay(function(d, i) {
-        return i * 50
+        return i * 70
       })
       .attr('height', BAR_W)
       .attr('width', function(d) {
@@ -72,7 +72,7 @@ class BarChart extends Component {
 
     svg
       .append('rect')
-      .attr('height', 540)
+      .attr('height', 430)
       .attr('width', 1)
       .attr('y', 0)
       .attr('x', H_PADDING)
