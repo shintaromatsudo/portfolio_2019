@@ -41,6 +41,9 @@ const About = () => (
     <LinkContact url={'about'} />
     <style jsx>{`
       #about {
+        width: 100vw;
+        height: 100vh;
+        background-color: #f6bfbc;
       }
       .mainAbout {
         display: flex;

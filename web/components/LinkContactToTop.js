@@ -61,8 +61,9 @@ const LinkTop = props => {
       <style jsx>{`
         #top {
           position: fixed;
-          top: -70px;
-          left: 45%;
+          top: -10%;
+          left: 50%;
+          margin-left: -75px;
         }
         .hoverTop {
           animation: bounceTop 0.5s linear 0s;

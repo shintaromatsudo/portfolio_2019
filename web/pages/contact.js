@@ -30,6 +30,7 @@ const Contact = () => {
         #contact {
           width: 100vw;
           height: 100vh;
+          background-color: #a0d8ef;
         }
         .contact {
           padding-top: 120px;

@@ -2,23 +2,55 @@ import Router from 'next/router'
 import PageLink from './PageLink'
 
 const LinkContact = props => {
-  const hover = (pageId, colorId, pageClass, colorClass) => {
+  const hover = (
+    pageId,
+    colorId,
+    pageHover,
+    pageLeave,
+    colorHover,
+    colorLeave
+  ) => {
     const page = document.getElementById(pageId)
     const color = document.getElementById(colorId)
-    page.classList.add(pageClass)
-    color.classList.add(colorClass)
+    page.classList.add(pageHover)
+    color.classList.add(colorHover)
+    page.classList.remove(pageLeave)
+    color.classList.remove(colorLeave)
   }
-  const leave = (pageId, colorId, pageClass, colorClass) => {
+  const leave = (
+    pageId,
+    colorId,
+    pageHover,
+    pageLeave,
+    colorHover,
+    colorLeave
+  ) => {
     const page = document.getElementById(pageId)
     const color = document.getElementById(colorId)
-    page.classList.remove(pageClass)
-    color.classList.remove(colorClass)
+    page.classList.add(pageLeave)
+    color.classList.add(colorLeave)
+    page.classList.remove(pageHover)
+    color.classList.remove(colorHover)
   }
   const hoverContact = () => {
-    hover('contact', 'blue', 'hoverContact', 'hoverBlue')
+    hover(
+      'contact',
+      'blue',
+      'hoverContact',
+      'leaveContact',
+      'hoverBlue',
+      'leaveBlue'
+    )
   }
   const leaveContact = () => {
-    leave('contact', 'blue', 'hoverContact', 'hoverBlue')
+    leave(
+      'contact',
+      'blue',
+      'hoverContact',
+      'leaveContact',
+      'hoverBlue',
+      'leaveBlue'
+    )
   }
 
   const click = (colorId, colorClass, pathname) => {
@@ -49,11 +81,16 @@ const LinkContact = props => {
       <style jsx>{`
         #contact {
           position: fixed;
-          left: 45%;
-          bottom: -70px;
+          bottom: -10%;
+          left: 50%;
+          margin-left: -75px;
         }
         .hoverContact {
           animation: bounceContact 0.5s linear 0s;
+          animation-fill-mode: forwards;
+        }
+        .leaveContact {
+          animation: bounceContactReturn 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
         .blue {
@@ -69,6 +106,10 @@ const LinkContact = props => {
           animation: bounceBlue 0.5s linear 0s;
           animation-fill-mode: forwards;
         }
+        .leaveBlue {
+          animation: bounceBlueReturn 0.5s linear 0s;
+          animation-fill-mode: forwards;
+        }
         .clickBlue {
           animation: fillBlue 0.5s linear 0s;
           animation-fill-mode: forwards;
@@ -78,10 +119,10 @@ const LinkContact = props => {
             transform: translateaY(-0%);
           }
           5% {
-            transform: translateY(-22%);
+            transform: translateY(-20%);
           }
           30% {
-            transform: translateY(-8%);
+            transform: translateY(-10%);
           }
           50% {
             transform: translateY(-17%);
@@ -91,6 +132,26 @@ const LinkContact = props => {
           }
           100% {
             transform: translateY(-15%);
+          }
+        }
+        @keyframes bounceContactReturn {
+          0% {
+            transform: translateaY(-15%);
+          }
+          5% {
+            transform: translateY(5%);
+          }
+          30% {
+            transform: translateY(-5%);
+          }
+          50% {
+            transform: translateY(2%);
+          }
+          75% {
+            transform: translateY(-2%);
+          }
+          100% {
+            transform: translateY(0%);
           }
         }
         @keyframes bounceBlue {
@@ -111,6 +172,26 @@ const LinkContact = props => {
           }
           100% {
             top: 96%;
+          }
+        }
+        @keyframes bounceBlueReturn {
+          0% {
+            top: 96%;
+          }
+          5% {
+            top: 101%;
+          }
+          30% {
+            top: 99%;
+          }
+          50% {
+            top: 100.5%;
+          }
+          75% {
+            top: 99.5%;
+          }
+          100% {
+            top: 100%;
           }
         }
         @keyframes fillBlue {

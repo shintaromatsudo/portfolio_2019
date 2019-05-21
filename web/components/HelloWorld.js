@@ -65,23 +65,50 @@ class HelloWorld extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div id="helloWorld">
-          <h1 id="h1" />
-        </div>
+        <div id="topImg" />
+        <h1 id="h1" />
         <style jsx>{`
-          #helloWorld {
-            width: 100vw;
+          #topImg {
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('../static/img/TheWave.jpg');
+            background-image: url('../static/img/Top.png');
             background-size: cover;
             background-position: center;
           }
-          h1 {
-            font-size: 7vw;
-            text-shadow: 7px 7px 1px #dddddd;
+          @media screen and (max-width: 1024px) {
+            h1 {
+              transform: rotate(90deg);
+              width: 100%;
+              height: 5rem;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              font-size: 10vw;
+              font-weight: bold;
+              text-shadow: 7px 7px 1px #dddddd;
+              text-align: center;
+            }
+          }
+          @media screen and (min-width: 1025px) {
+            h1 {
+              width: 80%;
+              height: 10rem;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              font-size: 7vw;
+              font-weight: bold;
+              text-shadow: 7px 7px 1px #dddddd;
+              text-align: center;
+            }
           }
           .fadeInOut {
             animation: fadeInOut 10s;

@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const PageLink = props => (
   <div>
     <p>{props.name}</p>
@@ -12,7 +10,7 @@ const PageLink = props => (
       }
       p {
         font-size: 30px;
-        color: black;
+        color: white;
         margin: auto;
       }
     `}</style>
