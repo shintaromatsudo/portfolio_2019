@@ -19,7 +19,6 @@ const ContactButton = props => (
       button :hover {
         background: black;
         color: white;
-        cursor: pointer;
       }
     `}</style>
   </div>

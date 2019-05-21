@@ -105,7 +105,13 @@ class ChangeContentButton extends React.Component {
             padding: 10px;
             margin: 10px;
             border: 1px solid black;
+            border-radius: 5px;
             cursor: pointer;
+            transition: 0.4s;
+          }
+          .contentButton :hover {
+            background: black;
+            color: white;
           }
         `}</style>
       </div>
