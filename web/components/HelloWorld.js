@@ -69,7 +69,7 @@ class HelloWorld extends React.Component {
         <h1 id="h1" />
         <style jsx>{`
           #topImg {
-            height: 100vh;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;

@@ -29,7 +29,7 @@ const Contact = () => {
       <style jsx>{`
         #contact {
           width: 100vw;
-          height: 100vh;
+          height: 100%;
           background-color: #a0d8ef;
         }
         .contact {

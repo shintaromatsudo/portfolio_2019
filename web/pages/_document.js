@@ -26,7 +26,7 @@ class MyDocument extends Document {
               font-family: Impact;
               margin:0;
             }
-            .greetingContents, .careerContents {
+            .greetingContents, .careerContents, .careerContentsSp {
               font-family: Lato, Noto Sans JP, 游ゴシック Medium, 游ゴシック体,
                 Yu Gothic Medium, YuGothic, ヒラギノ角ゴ ProN,
                 Hiragino Kaku Gothic ProN, メイリオ, Meiryo, ＭＳＰゴシック, MSPGothic,

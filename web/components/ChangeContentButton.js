@@ -20,7 +20,7 @@ class ChangeContentButton extends React.Component {
     const contentga = document.getElementById('ContentGallery')
     switch (content) {
       case 'greeting':
-        this.props.dispatch(changeAboutTitle('Greeting'))
+        this.props.dispatch(changeAboutTitle('GREETING'))
         contentgr.classList.remove('d-none')
         contentc.classList.add('d-none')
         contents.classList.add('d-none')
@@ -28,7 +28,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'career':
-        this.props.dispatch(changeAboutTitle('Career'))
+        this.props.dispatch(changeAboutTitle('CAREER'))
         contentgr.classList.add('d-none')
         contentc.classList.remove('d-none')
         contents.classList.add('d-none')
@@ -36,7 +36,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'skills':
-        this.props.dispatch(changeAboutTitle('Skills'))
+        this.props.dispatch(changeAboutTitle('SKILLS'))
         contentgr.classList.add('d-none')
         contentc.classList.add('d-none')
         contents.classList.remove('d-none')
@@ -44,7 +44,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'works':
-        this.props.dispatch(changeAboutTitle('Works'))
+        this.props.dispatch(changeAboutTitle('WORKS'))
         contentgr.classList.add('d-none')
         contentc.classList.add('d-none')
         contents.classList.add('d-none')
@@ -52,7 +52,7 @@ class ChangeContentButton extends React.Component {
         contentga.classList.add('d-none')
         break
       case 'gallery':
-        this.props.dispatch(changeAboutTitle('Gallery'))
+        this.props.dispatch(changeAboutTitle('GALLERY'))
         contentgr.classList.add('d-none')
         contentc.classList.add('d-none')
         contents.classList.add('d-none')
@@ -63,7 +63,7 @@ class ChangeContentButton extends React.Component {
   }
   render() {
     return (
-      <div className="aboutContents">
+      <div className="changeContentButton">
         <p
           className="contentButton"
           onClick={() => this.changeContent('greeting')}
@@ -95,23 +95,42 @@ class ChangeContentButton extends React.Component {
           GALLERY
         </p>
         <style jsx>{`
-          .aboutContents {
-            width: 100px;
-            padding: 40px 0 0 80px;
-            margin: 0;
-            text-align: center;
-          }
-          .contentButton {
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid black;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.4s;
-          }
           .contentButton :hover {
             background: black;
             color: white;
+          }
+          @media screen and (max-width: 1024px) {
+            .changeContentButton {
+              font-size: 8px;
+              width: 100px;
+              padding: 0;
+              margin: 0;
+              text-align: center;
+            }
+            .contentButton {
+              padding: 10px;
+              margin: 10px;
+              border: 1px solid black;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.4s;
+            }
+          }
+          @media screen and (min-width: 1025px) {
+            .changeContentButton {
+              width: 100px;
+              padding: 40px 0 0 80px;
+              margin: 0;
+              text-align: center;
+            }
+            .contentButton {
+              padding: 10px;
+              margin: 10px;
+              border: 1px solid black;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: 0.4s;
+            }
           }
         `}</style>
       </div>
