@@ -102,9 +102,9 @@ class BarChart extends Component {
     const node = this.node
     const W = 700,
       H = 450,
-      BAR_W = 30,
-      BAR_PADDING = 40,
-      W_PADDING = 25,
+      BAR_W = 28,
+      BAR_PADDING = 35,
+      W_PADDING = 22,
       H_PADDING = 10
 
     const svg = d3
@@ -132,7 +132,7 @@ class BarChart extends Component {
       })
       .attr('height', BAR_W)
       .attr('width', function(d) {
-        return d[1] * 3
+        return d[1] * 2.5
       })
       .attr('style', 'fill:turquoise')
 
@@ -149,14 +149,14 @@ class BarChart extends Component {
         return i * BAR_PADDING + W_PADDING
       })
       .attr('x', function(d, i) {
-        return d[1] * 2.8
+        return d[1] * 2.3
       })
       .attr('font-size', '20px')
       .attr('fill', 'black')
 
     svg
       .append('rect')
-      .attr('height', 430)
+      .attr('height', 378)
       .attr('width', 1)
       .attr('y', 0)
       .attr('x', H_PADDING)

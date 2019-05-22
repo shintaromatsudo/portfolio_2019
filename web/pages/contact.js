@@ -29,11 +29,11 @@ const Contact = () => {
       <style jsx>{`
         #contact {
           width: 100vw;
-          height: 100%;
+          height: 100vh;
           background-color: #a0d8ef;
         }
         .contact {
-          padding-top: 120px;
+          padding-top: 150px;
         }
         .getInTouch {
           font-size: 50px;

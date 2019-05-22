@@ -11,14 +11,16 @@ const ContactButton = props => (
         padding: 10px;
         display: inline-block;
         text-decoration: none;
+        background: white;
         color: black;
         border: solid 2px black;
         border-radius: 5px;
         transition: 0.4s;
       }
       button :hover {
-        background: black;
+        background: #2ca9e1;
         color: white;
+        border: solid 2px white;
       }
     `}</style>
   </div>
