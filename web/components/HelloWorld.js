@@ -1,6 +1,10 @@
 import React from 'react'
 
 class HelloWorld extends React.Component {
+  constructor(props) {
+    super(props)
+    this.hw = this.hw.bind(this)
+  }
   componentDidMount() {
     this.hw()
   }
@@ -81,7 +85,7 @@ class HelloWorld extends React.Component {
             h1 {
               transform: rotate(90deg);
               width: 100%;
-              height: 5rem;
+              height: 4rem;
               position: absolute;
               top: 0;
               bottom: 0;

@@ -1,29 +1,32 @@
 import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
+import { isNative, isIOS, isAndroid, isSmartPhone } from './UserAgent'
 
-const headerStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
+export default function Layout(ComposedComponent) {
+  class AppLayout extends React.Component {
+    constructor(props) {
+      super(props)
+      this.resize = this.resize.bind(this)
+    }
+
+    componentDidMount() {
+      if (isNative() || isIOS() || isAndroid() || isSmartPhone()) {
+        this.resize()
+      }
+    }
+
+    resize() {
+      document.body.style.height = window.innerHeight + 'px'
+      console.log(document.body.style.height)
+    }
+
+    render() {
+      return (
+        <React.Fragment>
+          <ComposedComponent {...this.props} />
+        </React.Fragment>
+      )
+    }
+  }
+
+  return AppLayout
 }
-
-const footerStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-}
-
-const Layout = props => (
-  <React.Fragment>
-    <div style={headerStyle}>
-      <Header />
-    </div>
-    {props.children}
-    <div style={footerStyle}>
-      <Footer />
-    </div>
-  </React.Fragment>
-)
-
-export default Layout

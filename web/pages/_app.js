@@ -1,11 +1,11 @@
 import 'babel-polyfill'
 import React from 'react'
 import App, { Container } from 'next/app'
-// REDUX
 import { Provider } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 import withReduxSaga from 'next-redux-saga'
 import configureStore from '../store'
+import Layout from '../components/Layout'
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -30,4 +30,5 @@ class MyApp extends App {
   }
 }
 
-export default withRedux(configureStore)(withReduxSaga(MyApp))
+const Layouted = Layout(MyApp)
+export default withRedux(configureStore)(withReduxSaga(Layouted))
