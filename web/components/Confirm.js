@@ -45,11 +45,13 @@ const Confirm = props => {
       </form>
       <style jsx>{`
         .c {
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           width: 100vw;
           height: 100vh;
+          text-align: center;
+          background-color: #a0d8ef;
           z-index: 9999;
         }
       `}</style>

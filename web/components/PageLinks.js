@@ -34,15 +34,29 @@ const PageLinks = props => {
     color.classList.remove(colorHover)
   }
   const hoverAbout = () => {
-    hover('about', 'pink', 'hoverAbout', 'leaveAbout', 'hoverPink', 'leavePink')
+    hover(
+      'aboutButton',
+      'pink',
+      'hoverAbout',
+      'leaveAbout',
+      'hoverPink',
+      'leavePink'
+    )
   }
   const leaveAbout = () => {
-    leave('about', 'pink', 'hoverAbout', 'leaveAbout', 'hoverPink', 'leavePink')
+    leave(
+      'aboutButton',
+      'pink',
+      'hoverAbout',
+      'leaveAbout',
+      'hoverPink',
+      'leavePink'
+    )
   }
 
   const hoverBlog = () => {
     hover(
-      'blog',
+      'blogButton',
       'orange',
       'hoverBlog',
       'leaveBlog',
@@ -53,7 +67,7 @@ const PageLinks = props => {
 
   const leaveBlog = () => {
     leave(
-      'blog',
+      'blogButton',
       'orange',
       'hoverBlog',
       'leaveBlog',
@@ -85,7 +99,7 @@ const PageLinks = props => {
         onMouseLeave={leaveAbout}
       >
         <div id="pink" className="pink" />
-        <div id="about">
+        <div id="aboutButton">
           <PageLink name="About" />
         </div>
       </div>
@@ -95,23 +109,25 @@ const PageLinks = props => {
         onMouseLeave={leaveBlog}
       >
         <div id="orange" className="orange" />
-        <div id="blog">
+        <div id="blogButton">
           <PageLink name="Blog" />
         </div>
       </div>
       <LinkContact url={props.url} />
       <style jsx>{`
-        #about {
+        #aboutButton {
           position: fixed;
           left: -50px;
           top: 35%;
           transform: rotate(90deg);
+          z-index: 50;
         }
-        #blog {
+        #blogButton {
           position: fixed;
           right: -50px;
           top: 35%;
           transform: rotate(-90deg);
+          z-index: 50;
         }
         .hoverAbout {
           animation: bounceAbout 0.5s linear 0s;

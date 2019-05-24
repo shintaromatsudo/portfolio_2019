@@ -8,20 +8,18 @@ const style = {
 }
 
 const Home = () => (
-  <React.Fragment>
+  <div id="home">
     <FadeOutColor style={style} />
-    <div id="home">
+    <div className="home">
       <PageLinks url={'home'} />
       <HelloWorld />
     </div>
     <style jsx>{`
       #home {
-        width: 100vw;
-        height: 100vh;
         background-color: #7ebea5;
       }
     `}</style>
-  </React.Fragment>
+  </div>
 )
 
 export default Home

@@ -9,25 +9,28 @@ const style = {
 }
 
 const Blog = () => (
-  <React.Fragment>
+  <div id="blog">
     <FadeOutColor style={style} />
-    <div className="Blog">
+    <div className="blog">
       <h2>BLOG</h2>
       <Blogs />
     </div>
     <LinkHome />
     <LinkContact url={'blog'} />
     <style jsx>{`
-      .Blog {
-        width: 100vw;
-        height: 100vh;
+      #blog {
+        position: fixed;
+        width: 100%;
         background-color: #f7b977;
       }
+      // .blog {
+      //   width: 80%;
+      // }
       h2 {
         padding: 50px;
       }
     `}</style>
-  </React.Fragment>
+  </div>
 )
 
 export default Blog

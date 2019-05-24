@@ -99,7 +99,7 @@ class ChangeContentButton extends React.Component {
             background: black;
             color: white;
           }
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 500px) {
             .changeContentButton {
               font-size: 8px;
               width: 100px;
@@ -116,7 +116,7 @@ class ChangeContentButton extends React.Component {
               transition: 0.4s;
             }
           }
-          @media screen and (min-width: 1025px) {
+          @media screen and (min-width: 501px) {
             .changeContentButton {
               width: 100px;
               padding: 40px 0 0 80px;

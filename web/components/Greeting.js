@@ -28,7 +28,7 @@ const Greeting = () => (
         }
         .sentence {
           position: absolute;
-          top: 300px;
+          top: 250px;
           font-size: 8px;
           font-weight: bold;
           color: white;

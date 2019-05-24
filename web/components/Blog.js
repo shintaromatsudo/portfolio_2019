@@ -8,23 +8,27 @@ const Blog = props => {
   return (
     <React.Fragment>
       <div className="blog">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{content}</p>
-        <Link
-          as={`blog/${title}`}
-          href={`blog/detail?title=${title}&content=${content}`}
-        >
-          <a>MORE</a>
-        </Link>
+        <div className="more">
+          <Link
+            as={`blog/${title}`}
+            href={`blog/detail?title=${title}&content=${content}`}
+          >
+            <a>MORE</a>
+          </Link>
+        </div>
       </div>
       <style jsx>{`
         .blog {
-          height: 300px;
+          width: 200px;
+          height: 200px;
           border: 1px solid black;
           border-radius: 5px;
         }
-        p {
-          color: red;
+        .more {
+          width: 50px;
+          margin-left: auto;
         }
         a {
           text-decoration: none;

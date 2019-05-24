@@ -1,7 +1,7 @@
 import { CHANGE_ABOUT_TITLE } from '../actions'
 
 const initialState = {
-  aboutTitle: 'Greeting'
+  aboutTitle: 'GREETING'
 }
 
 const aboutTitle = (state = initialState, action) => {

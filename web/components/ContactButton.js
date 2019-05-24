@@ -18,7 +18,7 @@ const ContactButton = props => (
         transition: 0.4s;
       }
       button :hover {
-        background: #2ca9e1;
+        background: black;
         color: white;
         border: solid 2px white;
       }

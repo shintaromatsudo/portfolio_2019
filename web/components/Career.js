@@ -26,6 +26,9 @@ const Career = () => (
         WEBデザイン(Figma)、画像編集(Illustrator,
         Photoshop)、動画制作(FinalCut)のお仕事もさせていただいたことがあります。
       </p>
+      <a href="https://shintaromatsudo.github.io/" target="_blank">
+        <button type="button">旧ポートフォリオ</button>
+      </a>
     </div>
     <div className="careerContentsSp">
       <p>2018年 9月～2018年11月</p>
@@ -54,9 +57,17 @@ const Career = () => (
         <br />
         動画制作(FinalCut)のお仕事もさせていただいたことがあります。
       </p>
+      <a href="https://shintaromatsudo.github.io/" target="_blank">
+        <button type="button">旧ポートフォリオ</button>
+      </a>
     </div>
     <style jsx>{`
-      @media screen and (max-width: 1024px) {
+      button :hover {
+        background: black;
+        color: white;
+        border: solid 2px white;
+      }
+      @media screen and (max-width: 500px) {
         .careerContents {
           display: none;
         }
@@ -64,13 +75,40 @@ const Career = () => (
           font-size: 8px;
           margin: auto 0;
         }
+        button {
+          width: 100px;
+          height: 30px;
+          font-size: 7px;
+          margin: auto;
+          padding: auto;
+          display: inline-block;
+          text-decoration: none;
+          background: #fdeff2;
+          color: black;
+          border: solid 0.5px black;
+          border-radius: 5px;
+          transition: 0.4s;
+        }
       }
-      @media screen and (min-width: 1025px) {
+      @media screen and (min-width: 501px) {
         .careerContents {
           margin: auto 100px;
         }
         .careerContentsSp {
           display: none;
+        }
+        button {
+          width: 200px;
+          height: 40px;
+          margin: 10px;
+          padding: 10px;
+          display: inline-block;
+          text-decoration: none;
+          background: #fdeff2;
+          color: black;
+          border: solid 1px black;
+          border-radius: 5px;
+          transition: 0.4s;
         }
       }
     `}</style>

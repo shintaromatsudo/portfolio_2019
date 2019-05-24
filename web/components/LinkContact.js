@@ -1,5 +1,7 @@
 import Router from 'next/router'
+import { connect } from 'react-redux'
 import PageLink from './PageLink'
+import { contactToTop } from '../actions'
 
 const LinkContact = props => {
   const hover = (
@@ -34,7 +36,7 @@ const LinkContact = props => {
   }
   const hoverContact = () => {
     hover(
-      'contact',
+      'contactButton',
       'blue',
       'hoverContact',
       'leaveContact',
@@ -44,7 +46,7 @@ const LinkContact = props => {
   }
   const leaveContact = () => {
     leave(
-      'contact',
+      'contactButton',
       'blue',
       'hoverContact',
       'leaveContact',
@@ -56,8 +58,8 @@ const LinkContact = props => {
   const click = (colorId, colorClass, pathname) => {
     const elm = document.getElementById(colorId)
     elm.classList.add(colorClass)
-    const url = props.url
-    sessionStorage.setItem('url', url)
+    props.dispatch(contactToTop(props.url))
+    console.log(props)
     setTimeout(function() {
       Router.push({ pathname: pathname })
     }, 500)
@@ -74,16 +76,17 @@ const LinkContact = props => {
         onMouseLeave={leaveContact}
       >
         <div id="blue" className="blue" />
-        <div id="contact">
+        <div id="contactButton">
           <PageLink name="Contact" />
         </div>
       </div>
       <style jsx>{`
-        #contact {
+        #contactButton {
           position: fixed;
           bottom: -10%;
           left: 50%;
           margin-left: -75px;
+          z-index: 50;
         }
         .hoverContact {
           animation: bounceContact 0.5s linear 0s;
@@ -207,4 +210,4 @@ const LinkContact = props => {
   )
 }
 
-export default LinkContact
+export default connect(state => state)(LinkContact)

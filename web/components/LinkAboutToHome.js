@@ -15,10 +15,10 @@ const LinkHome = props => {
     color.classList.remove(colorClass)
   }
   const hoverHome = () => {
-    hover('home', 'green', 'hoverHome', 'hoverGreen')
+    hover('homeButton', 'green', 'hoverHome', 'hoverGreen')
   }
   const leaveHome = () => {
-    leave('home', 'green', 'hoverHome', 'hoverGreen')
+    leave('homeButton', 'green', 'hoverHome', 'hoverGreen')
   }
 
   const click = (colorId, colorClass, pathname) => {
@@ -40,12 +40,12 @@ const LinkHome = props => {
         onMouseLeave={leaveHome}
       >
         <div id="green" className="green" />
-        <div id="home" style={props.homeStyle}>
+        <div id="homeButton" style={props.homeStyle}>
           <PageLink name="Home" />
         </div>
       </div>
       <style jsx>{`
-        #home {
+        #homeButton {
           position: fixed;
           right: -50px;
           top: 35%;

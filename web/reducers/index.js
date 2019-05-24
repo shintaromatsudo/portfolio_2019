@@ -5,6 +5,7 @@ import todos from './todos'
 import visibilityFilter from './visibilityFilter'
 import { fetchBlogData } from './blogs'
 import aboutTitle from './aboutTitle'
+import contactToTop from './contactToTop'
 
 const rootReducer = combineReducers({
   count,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   todos,
   visibilityFilter,
   fetchBlogData,
-  aboutTitle
+  aboutTitle,
+  contactToTop
 })
 
 export default rootReducer

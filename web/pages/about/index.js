@@ -32,10 +32,12 @@ const About = () => {
             <Skills />
           </div>
           <div id="ContentWorks" className="d-none">
-            <Works />
+            {/* <Works /> */}
+            <p className="UnderConstruction">Under Construction...</p>
           </div>
           <div id="ContentGallery" className="d-none">
             {/* <Gallery /> */}
+            <p className="UnderConstruction">Under Construction...</p>
           </div>
         </div>
       </div>
@@ -43,8 +45,8 @@ const About = () => {
       <LinkContact url={'about'} />
       <style jsx>{`
         #about {
-          width: 100vw;
-          height: 100vh;
+          position: fixed;
+          width: 100%;
           background-color: #fdeff2;
         }
         .mainAbout {
@@ -56,6 +58,20 @@ const About = () => {
         }
         .d-none {
           display: none;
+        }
+        @media screen and (max-width: 500px) {
+          .UnderConstruction {
+            font-size: 20px;
+            text-align: center;
+            margin-right: 90px;
+          }
+        }
+        @media screen and (min-width: 501px) {
+          .UnderConstruction {
+            font-size: 30px;
+            text-align: center;
+            margin-right: 180px;
+          }
         }
       `}</style>
     </div>

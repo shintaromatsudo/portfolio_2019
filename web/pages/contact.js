@@ -1,3 +1,4 @@
+import { connect } from 'react-redux'
 import LinkTop from '../components/LinkContactToTop'
 import FadeOutColor from '../components/FadeOutColor'
 import Form from '../components/FormGetInTouch'
@@ -6,8 +7,8 @@ const style = {
   backgroundColor: '#2ca9e1'
 }
 
-const Contact = () => {
-  const url = sessionStorage.getItem('url')
+const Contact = props => {
+  const url = props.contactToTop.url
   return (
     <div id="contact">
       <FadeOutColor style={style} />
@@ -28,12 +29,12 @@ const Contact = () => {
       <LinkTop url={url} />
       <style jsx>{`
         #contact {
-          width: 100vw;
-          height: 100vh;
+          position: fixed;
+          width: 100%;
           background-color: #a0d8ef;
         }
         .contact {
-          padding-top: 150px;
+          padding-top: 80px;
         }
         .getInTouch {
           font-size: 50px;
@@ -58,4 +59,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default connect(state => state)(Contact)

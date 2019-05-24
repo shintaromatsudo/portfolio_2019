@@ -30,6 +30,7 @@ export const SUCCEEDED_DELETE = 'SUCCEEDED_DELETE'
 export const FAILED_DELETE = 'FAILED_DELETE'
 
 export const CHANGE_ABOUT_TITLE = 'CHANGE_ABOUT_TITLE'
+export const CONTACT_TO_TOP = 'CONTACT_TO_TOP'
 
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
@@ -113,3 +114,5 @@ export const changeAboutTitle = aboutTitle => ({
   type: CHANGE_ABOUT_TITLE,
   aboutTitle
 })
+
+export const contactToTop = url => ({ type: CONTACT_TO_TOP, url })

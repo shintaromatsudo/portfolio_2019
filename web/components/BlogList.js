@@ -20,7 +20,7 @@ class BlogList extends React.Component {
           .blog-list {
             display: grid;
             gap: 50px;
-            grid-template-columns: repeat(auto-fill, 300px);
+            grid-template-columns: repeat(auto-fill, 200px);
             justify-content: center;
           }
         `}</style>

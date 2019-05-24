@@ -73,20 +73,18 @@ class HelloWorld extends React.Component {
         <h1 id="h1" />
         <style jsx>{`
           #topImg {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: fixed;
+            width: 100%;
             background-image: url('../static/img/Top.png');
             background-size: cover;
             background-position: center;
           }
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 500px) {
             h1 {
               transform: rotate(90deg);
               width: 100%;
-              height: 4rem;
-              position: absolute;
+              height: 3rem;
+              position: fixed;
               top: 0;
               bottom: 0;
               left: 0;
@@ -96,13 +94,14 @@ class HelloWorld extends React.Component {
               font-weight: bold;
               text-shadow: 7px 7px 1px #dddddd;
               text-align: center;
+              z-index: 50;
             }
           }
-          @media screen and (min-width: 1025px) {
+          @media screen and (min-width: 501px) {
             h1 {
               width: 80%;
-              height: 10rem;
-              position: absolute;
+              height: 130px;
+              position: fixed;
               top: 0;
               bottom: 0;
               left: 0;
@@ -112,6 +111,7 @@ class HelloWorld extends React.Component {
               font-weight: bold;
               text-shadow: 7px 7px 1px #dddddd;
               text-align: center;
+              z-index: 50;
             }
           }
           .fadeInOut {

@@ -5,12 +5,12 @@ const AboutTitle = props => (
     <h2>{props.title}</h2>
 
     <style jsx>{`
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 500px) {
         .aboutTitle {
           padding: 20px;
         }
       }
-      @media screen and (min-width: 1025px) {
+      @media screen and (min-width: 501px) {
         .aboutTitle {
           padding: 50px;
         }
