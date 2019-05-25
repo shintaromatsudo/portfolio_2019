@@ -25,7 +25,6 @@ app
 
     server.post('/contact', (req, res) => {
       const { name, email, title, message } = req.query
-      console.log(req.query)
       // SMTPサーバーの設定
       const transporter = nodemailer.createTransport(
         smtpTransport({
@@ -65,5 +64,4 @@ app
   })
   .catch(ex => {
     console.error(ex.stack)
-    process.exit(1)
   })

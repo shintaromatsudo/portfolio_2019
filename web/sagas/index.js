@@ -53,7 +53,6 @@ function* postData({ payload }) {
 function* fetchDetail({ payload }) {
   try {
     const id = payload
-    console.log(id)
     const responceData = yield call(getBlog, { id })
     yield put(successDetail(responceData.data))
   } catch (e) {
@@ -64,7 +63,6 @@ function* fetchDetail({ payload }) {
 function* updateData({ payload }) {
   try {
     const { id } = payload
-    console.log(id)
     const responceData = yield call(updateBlog, { id })
     yield put(successUpdate(responceData.data))
   } catch (e) {
@@ -75,7 +73,6 @@ function* updateData({ payload }) {
 function* deleteData({ payload }) {
   try {
     const { id } = payload
-    console.log(id)
     const responceData = yield call(deleteBlog, { id })
     yield put(successDelete(responceData.data))
   } catch (e) {

@@ -4,10 +4,7 @@ import { withRouter } from 'next/router'
 import { detailData } from '../../actions'
 
 const Detail = props => {
-  console.log(props)
-  const { id, title, content } = props.router.query
-  console.log(id)
-  // props.detailData({ id: id })
+  const { title, content } = props.router.query
   return (
     <div>
       <h2>{title}</h2>
@@ -19,8 +16,6 @@ const Detail = props => {
 const mapDispatchToProps = dispatch => ({
   detailData: () => dispatch(detailData())
 })
-
-// export default Detail
 
 export default connect(
   null,

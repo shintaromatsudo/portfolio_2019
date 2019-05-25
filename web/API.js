@@ -26,7 +26,6 @@ export function postBlog(data) {
 }
 
 export function getBlog(data) {
-  console.log(data)
   return axios({
     method: 'post',
     url: url + '/blogs/${data.id}',
@@ -35,7 +34,6 @@ export function getBlog(data) {
 }
 
 export function updateBlog(data) {
-  console.log(data)
   return axios({
     method: 'post',
     url: url + '/blogs/${data.id}',

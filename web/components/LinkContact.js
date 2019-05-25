@@ -59,7 +59,6 @@ const LinkContact = props => {
     const elm = document.getElementById(colorId)
     elm.classList.add(colorClass)
     props.dispatch(contactToTop(props.url))
-    console.log(props)
     setTimeout(function() {
       Router.push({ pathname: pathname })
     }, 500)

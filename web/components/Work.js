@@ -2,7 +2,7 @@ import React from 'react'
 
 const Work = props => {
   const hover = () => {
-    console.log(props)
+    // console.log(props)
   }
   return (
     <React.Fragment>

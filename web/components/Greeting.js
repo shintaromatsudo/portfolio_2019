@@ -1,7 +1,7 @@
 const Greeting = () => (
   <div className="greetingContents">
     <div className="theWave">
-      <img src="../static/img/TheWave2.jpg" alt="TheWave" />
+      <img src="../static/img/TheWave.jpg" alt="TheWave" />
     </div>
     <div className="sentence">
       <p>こんにちは、松土　慎太郎です。</p>

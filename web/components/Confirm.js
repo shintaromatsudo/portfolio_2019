@@ -8,13 +8,12 @@ const Confirm = props => {
   const handleSubmit = e => {
     e.preventDefault()
     const data = state
-    console.log(data)
     axios({
       method: 'POST',
       url: '/contact',
       params: data
     }).catch(function(err) {
-      console.log(err)
+      alert(err)
     })
     window.open('/complete')
     Router.push(`/`)

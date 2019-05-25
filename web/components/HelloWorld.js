@@ -49,8 +49,8 @@ class HelloWorld extends React.Component {
     for (let i = 0; randoms.length < text.length; i++) {
       const random = Math.floor(Math.random() * text.length)
       if (!randoms.includes(random)) {
-        console.log(random)
-        console.log(text[random])
+        // console.log(random)
+        // console.log(text[random])
         randoms.push(random)
         h1.classList.add('fadeInOut')
         const h = Math.random() * 360
