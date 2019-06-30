@@ -79,7 +79,7 @@ const LinkTop = props => {
       <style jsx>{`
         #top {
           position: fixed;
-          top: -10%;
+          top: -7%;
           left: 50%;
           margin-left: -75px;
         }

@@ -9,7 +9,7 @@ const Career = () => (
       <p>
         　　　　　　　　　　　　　　　　(Python, React.js, D3.js, postgreSQL)
       </p>
-      <p>2018年12月～2019年 3月　カスタマーサービスのためのSaaS開発</p>
+      <p>2018年11月～2019年 3月　カスタマーサービスのためのSaaS開発</p>
       <p>
         　　　　　　　　　　　　　　　　(React.js, Next.js, Redux,
         Node.js(Express), MySQL)
@@ -38,7 +38,7 @@ const Career = () => (
         <br />
         <br />
       </p>
-      <p>2018年12月～2019年 3月</p>
+      <p>2018年11月～2019年 3月</p>
       <p>　　カスタマーサービスのためのSaaS開発</p>
       <p>
         　　　(React.js, Next.js, Redux, Node.js(Express), MySQL)
@@ -92,7 +92,8 @@ const Career = () => (
       }
       @media screen and (min-width: 501px) {
         .careerContents {
-          margin: auto 100px;
+          width: 1000px;
+          margin: auto;
         }
         .careerContentsSp {
           display: none;
