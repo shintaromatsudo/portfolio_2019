@@ -18,6 +18,7 @@ const Greeting = () => (
           margin: auto;
         }
         .greetingContents {
+          margin: auto;
         }
         .theWave {
           width: 85%;
@@ -43,16 +44,17 @@ const Greeting = () => (
           display: flex;
         }
         .theWave {
-          width: 300px;
-          margin-left: 100px;
+          width: 400px;
+          margin-left: auto;
         }
         img {
-          width: 100%;
+          width: 80%;
           border-radius: 5px;
         }
         .sentence {
+          width: 500px;
           margin-top: 50px;
-          margin-left: 70px;
+          margin-right: auto;
         }
       }
     `}</style>

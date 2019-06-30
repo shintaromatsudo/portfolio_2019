@@ -98,19 +98,19 @@ const LinkHome = props => {
             left: 100%;
           }
           5% {
-            left: 95%;
+            left: 96%;
           }
           30% {
-            left: 97%;
+            left: 98%;
           }
           50% {
-            left: 95.5%;
-          }
-          75% {
             left: 96.5%;
           }
+          75% {
+            left: 97.5%;
+          }
           100% {
-            left: 96%;
+            left: 97%;
           }
         }
         @keyframes fillGreen {

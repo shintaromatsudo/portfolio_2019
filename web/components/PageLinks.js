@@ -274,19 +274,19 @@ const PageLinks = props => {
             right: 100%;
           }
           5% {
-            right: 95%;
+            right: 96%;
           }
           30% {
-            right: 97%;
+            right: 98%;
           }
           50% {
-            right: 95.5%;
-          }
-          75% {
             right: 96.5%;
           }
+          75% {
+            right: 97.5%;
+          }
           100% {
-            right: 96%;
+            right: 97%;
           }
         }
         @keyframes bounceOrange {
@@ -294,19 +294,19 @@ const PageLinks = props => {
             left: 100%;
           }
           5% {
-            left: 95%;
+            left: 96%;
           }
           30% {
-            left: 97%;
+            left: 98%;
           }
           50% {
-            left: 95.5%;
-          }
-          75% {
             left: 96.5%;
           }
+          75% {
+            left: 97.5%;
+          }
           100% {
-            left: 96%;
+            left: 97%;
           }
         }
         @keyframes bouncePinkReturn {

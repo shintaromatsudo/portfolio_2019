@@ -82,7 +82,7 @@ const LinkContact = props => {
       <style jsx>{`
         #contactButton {
           position: fixed;
-          bottom: -10%;
+          bottom: -7%;
           left: 50%;
           margin-left: -75px;
           z-index: 50;
